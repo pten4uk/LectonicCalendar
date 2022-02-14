@@ -1,0 +1,14 @@
+.dates__list > .date {
+    display: flex;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 18px;
+    background-color: #fff;
+}
+
+.dates__list > .date > span {
+    margin-top: 8px;
+}
