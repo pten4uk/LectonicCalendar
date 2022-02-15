@@ -1,11 +1,23 @@
-.calendar__wrapper > .calendar__container > .dates__list {
+.inside__container > .dates__list {
     display: grid;
     grid-template-columns: repeat(7, 60px);
     grid-template-rows: repeat(6, 60px);
     grid-gap: 12px;
     justify-content: center;
+}
 
-    margin-top: 153px;
+.dates__list > .dates__underlines {
+    position: absolute;
+    transform: translate(0, -5px);
+    width: 492px;
+}
+
+.dates__underlines > .dates__underline {
+    height: 2px;
+
+    margin-top: 70px;
+
+    background-color: #DBDBDB;
 }
 
 @import "Date.css";

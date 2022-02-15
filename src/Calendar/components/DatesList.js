@@ -12,7 +12,12 @@ function DatesList(props) {
 
     return (
         <section className="dates__list">
-            {calendar.map(day => <Date day={day.getDate()}/>)}
+            {calendar.map(date => {
+                return <Date day={date.getDate()
+                }/>})}
+            <div className="dates__underlines">
+                {getUnderlines().map(() => <div className="dates__underline"/>)}
+            </div>
         </section>
     )
 }
@@ -21,3 +26,7 @@ export default connect(
     state => ({store: state.calendar}),
     dispatch => ({})
 )(DatesList);
+
+function getUnderlines() {
+    return [1, 2, 3, 4, 5];
+}

@@ -1,16 +1,19 @@
 import React, {useEffect} from "react";
 
-import {connect} from "react-redux";
 import MonthNav from "./MonthNav/MonthNav";
 import DatesList from "./DatesList";
+import DaysOfWeek from "./DaysOfWeek";
 
 
 function Calendar(props) {
     return (
         <div className="calendar__wrapper">
             <div className="calendar__container">
-                <MonthNav/>
-                <DatesList/>
+                <div className="inside__container">
+                    <MonthNav/>
+                    <DaysOfWeek/>
+                    <DatesList/>
+                </div>
             </div>
         </div>
     )
