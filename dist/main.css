@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap);
+.dates__list > .date {
+    display: flex;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 18px;
+    background-color: #fff;
+    transition: transform .1s;
+
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dates__list > .date:hover {
+    transform: scale(1.3);
+
+    font-weight: 700;
+
+    z-index: 2;
+    border: 3px solid #B4B4B4;
+    box-shadow: 0 4px 10px rgba(0, 6, 32, .2);
+}
+
+.dates__list > .date > span {
+    margin-top: 8px;
+}
+
+.dates__list > .inactive {
+    color: #B4B4B4;
+    background-color: inherit;
+}
+
+.dates__list > .inactive:hover {
+    transform: none;
+    border: none;
+    cursor: default;
+    box-shadow: none;
+}
+
+.dates__list > .weekend {
+    color: #FFFFFF;
+    background-color: #DBDBDB;
+}
+.inside__container > .dates__list {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    grid-gap: 12px;
+    justify-content: center;
+}
+
+.dates__list > .dates__underlines {
+    position: absolute;
+    transform: translate(0, -5px);
+    width: 492px;
+}
+
+.dates__underlines > .dates__underline {
+    height: 1px;
+    margin-top: 71px;
+    background-color: #DBDBDB;
+}
+.inside__container > .month-nav {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.month-nav > button {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.month-nav > button.left {
+    transform: rotate(135deg);
+}
+
+.month-nav > span {
+    display: inline-block;
+    text-align: center;
+    width: 95px;
+
+    transform: translate(0, 6px);
+}
+
+.month-nav > button.right {
+    transform: rotate(-45deg);
+}
+
+.inside__container > .days-of-week__container {
+    display: flex;
+    flex-direction: column;
+    width: 505px;
+}
+
+.days-of-week__container > .days-of-week {
+    display: flex;
+    justify-content: space-around;
+}
+
+.days-of-week__container > .days-of-week > .day-of-week {
+    color: #B4B4B4;
+}
+
+.days-of-week__container > .days-of-week__underline {
+    width: 492px;
+    height: 1px;
+
+    background-color: #DBDBDB;
+    border: none;
+
+    margin-bottom: 20px;
+}
+.calendar__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.calendar__wrapper > .calendar__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 588px;
+    height: 621px;
+
+    background-color: #F5F5F5;
+    border-radius: 18px;
+}
+
+.calendar__wrapper > .calendar__container > .inside__container {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+
+    bottom: 48px;
+
+    height: 515px;
+}
+.date-detail__event {
+    display: flex;
+}
+
+.date-detail__event > .left-block,
+.date-detail__event > .time-range {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-detail__event > .left-block > .circle {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: rgba(0, 37, 255, 1);
+}
+
+.date-detail__event > .event-info {
+    margin-left: 12px;
+}
+
+
+.date-detail__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 621px;
+    width: 555px;
+
+    margin-left: 78px;
+}
+
+.date-detail__body {
+    height: 324px;
+
+    overflow-y: scroll;
+}
+
+.date-detail__main::-webkit-scrollbar {
+    width: 2px;
+}
+
+.date-detail__main::-webkit-scrollbar-thumb {
+    background-color: rgba(206, 17, 17, 0.4);
+    border-radius: 10px;
+}
+
+.date-detail__main::-webkit-scrollbar-track {
+    margin: 5px;
+}
+
+.date-detail__body > .date-detail__header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    width: 543px;
+
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.date-detail__body > .date-detail__header > hr {
+    width: 100%;
+    height: 1px;
+    background-color: #DBDBDB;
+    border: none;
+}
+
+.date-detail__body > .date-detail__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 543px;
+}
+
