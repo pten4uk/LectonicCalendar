@@ -6,7 +6,7 @@ function DaysOfWeek(props) {
     return (
         <div className="days-of-week__container">
             <div className="days-of-week">
-                {getDaysOfWeek().map(day => <div className="day-of-week">{day}</div> )}
+                {getDaysOfWeek().map((day, index)=> <div key={index} className="day-of-week">{day}</div> )}
             </div>
             <hr className="days-of-week__underline"/>
         </div>

@@ -12,11 +12,11 @@ function DatesList(props) {
 
     return (
         <section className="dates__list">
-            {calendar.map(date => {
-                return <Date date={date}/>
+            {calendar.map((date, index) => {
+                return <Date key={index} date={date}/>
             })}
             <div className="dates__underlines">
-                {getUnderlines().map(() => <div className="dates__underline"/>)}
+                {getUnderlines().map(index => <div key={index} className="dates__underline"/>)}
             </div>
         </section>
     )

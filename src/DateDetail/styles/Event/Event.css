@@ -1,0 +1,22 @@
+.date-detail__event {
+    display: flex;
+}
+
+.date-detail__event > .left-block,
+.date-detail__event > .time-range {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-detail__event > .left-block > .circle {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background-color: rgba(0, 37, 255, 1);
+}
+
+.date-detail__event > .event-info {
+    margin-left: 12px;
+}
+

@@ -3,10 +3,19 @@ import ReactDOM from "react-dom";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import {combineReducers} from "redux";
 
-import reducer from './Calendar/redux/reducers/index.js'
 import "./index.css";
-import Calendar from "./Calendar/components/Calendar";
+import App from "./App";
+import dateDetail from "./DateDetail/redux/reducers/dateDetail";
+import calendar from "./Calendar/redux/reducers/calendar";
+
+
+let reducer = combineReducers({
+        calendar,
+        dateDetail
+    }
+)
 
 const store = createStore(
     reducer,
@@ -16,7 +25,7 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        <Calendar/>
+        <App/>
     </Provider>,
     document.getElementById("root")
 );

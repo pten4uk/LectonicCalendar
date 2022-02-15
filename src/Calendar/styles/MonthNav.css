@@ -11,6 +11,7 @@
     padding: 4px;
 
     background-color: inherit;
+    cursor: pointer;
 }
 
 .month-nav > button.left {
