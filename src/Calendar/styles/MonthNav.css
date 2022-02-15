@@ -1,0 +1,30 @@
+.inside__container > .month-nav {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.month-nav > button {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+
+    background-color: inherit;
+}
+
+.month-nav > button.left {
+    transform: rotate(135deg);
+}
+
+.month-nav > span {
+    display: inline-block;
+    text-align: center;
+    width: 95px;
+
+    transform: translate(0, 6px);
+}
+
+.month-nav > button.right {
+    transform: rotate(-45deg);
+}

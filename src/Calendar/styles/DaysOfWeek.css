@@ -15,5 +15,10 @@
 
 .days-of-week__container > .days-of-week__underline {
     width: 492px;
-    border: 1px solid #DBDBDB;
+    height: 1px;
+
+    background-color: #DBDBDB;
+    border: none;
+
+    margin-bottom: 20px;
 }

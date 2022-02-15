@@ -1,20 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {connect} from "react-redux";
-import month from "../redux/reducers/calendar";
-import {getCalendar, MONTHS} from "./utils/calendar";
+
+import {getCalendar} from "../utils/calendar";
 import Date from "./Date";
 
 
 function DatesList(props) {
-    let year = props.store.currentYear;
-    let month = props.store.currentMonth;
+    let year = props.store.currentDate.getFullYear();
+    let month = props.store.currentDate.getMonth();
     let calendar = getCalendar(year, month);
 
     return (
         <section className="dates__list">
             {calendar.map(date => {
-                return <Date day={date.getDate()
-                }/>})}
+                return <Date date={date}/>
+            })}
             <div className="dates__underlines">
                 {getUnderlines().map(() => <div className="dates__underline"/>)}
             </div>

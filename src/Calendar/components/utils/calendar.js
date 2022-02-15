@@ -14,6 +14,16 @@ export const MONTHS = {
     11: 'Декабрь'
 }
 
+export const WEEK_DAYS = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+    Sunday: 0
+}
+
 function getDayOfWeek(date) {
     let day = date.getDay();
     if (day === 0) return 6;
@@ -27,12 +37,9 @@ export function getCalendar(year, month) {
 
     let day = 1;
     for (let week = 0; week < 6; week++) {
-        let days = [];
-
         for (let weekDay = 1; weekDay <= DAYS_OF_WEEK; weekDay++) {
             monthDays.push(new Date(year, month, -dayOfWeekFirstDayOfMonth + day++));
         }
-        // monthDays.push(days);
     }
     return monthDays;
 }

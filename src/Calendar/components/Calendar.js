@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 
-import MonthNav from "./MonthNav/MonthNav";
-import DatesList from "./DatesList";
+import MonthNav from "./MonthNav";
+import DatesList from "./DatesList/DatesList";
 import DaysOfWeek from "./DaysOfWeek";
 
 
