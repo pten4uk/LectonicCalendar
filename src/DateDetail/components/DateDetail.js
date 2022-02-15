@@ -6,18 +6,16 @@ import Event from "./Event/Event";
 function DateDetail(props) {
     return (
         <div className="date-detail__wrapper">
+            <header className="date-detail__header">
+                <span>24.02</span>
+            </header>
             <div className="date-detail__body">
-                <header className="date-detail__header">
-                    24.02
-                    <hr/>
-                </header>
                 <main className="date-detail__main">
                     <Event/>
                     <Event/>
                     <Event/>
                     <Event/>
                 </main>
-                <hr/>
             </div>
         </div>
     )

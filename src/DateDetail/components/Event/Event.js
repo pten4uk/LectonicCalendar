@@ -11,10 +11,10 @@ function Event(props) {
             </div>
             <div className="event-info">
                 <div className="header">Лекция подтверждена</div>
-                <div className="theme"><span>Тема:</span>Доноры России</div>
-                <div className="lecturer"><span>Лектор:</span>Евлампий Питрович Игорь</div>
-                <div className="listener"><span>Слушатель:</span>ОАО "Мокрые штаны"</div>
-                <div className="address"><span>Место:</span>Москва, ул. Не строителей, д. 98738</div>
+                <div className="theme">Тема: <span>Доноры России</span></div>
+                <div className="lecturer">Лектор: <span>Евлампий Питрович Игорь</span></div>
+                <div className="listener">Слушатель: <span>ОАО "Мокрые штаны"</span></div>
+                <div className="address">Место: <span>Москва, ул. Не строителей, д. 98738</span></div>
             </div>
             <div className="time-range">
                 <span className="start">10:00</span>

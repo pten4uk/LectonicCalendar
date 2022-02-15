@@ -1,5 +1,8 @@
 .date-detail__event {
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 1px solid #DBDBDB;
 }
 
 .date-detail__event > .left-block,
@@ -16,7 +19,51 @@
     background-color: rgba(0, 37, 255, 1);
 }
 
-.date-detail__event > .event-info {
-    margin-left: 12px;
+.date-detail__event > .left-block > .dynamic-circle {
+    margin-top: 4px;
+
+    width: 12px;
+    height: 96px;
+
+    border-radius: 18px;
+    background-color: rgba(0, 37, 255, 1);
 }
 
+.date-detail__event > .event-info {
+    transform: translate(-95px, 0);
+}
+
+.date-detail__event > .event-info > .theme,
+.date-detail__event > .event-info > .lecturer,
+.date-detail__event > .event-info > .listener,
+.date-detail__event > .event-info > .address {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.date-detail__event > .event-info span {
+    font-weight: 700;
+}
+
+
+.date-detail__event > .event-info > .header {
+    font-weight: 700;
+}
+
+.date-detail__event > .event-info > .theme {
+    margin-top: 8px;
+}
+
+.date-detail__event > .time-range {
+
+}
+
+.date-detail__main > hr {
+    width: 543px;
+    height: 1px;
+
+    margin: 0;
+
+    background-color: #DBDBDB;
+    border: none;
+}
