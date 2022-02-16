@@ -2,8 +2,11 @@
 .dates__list > .date {
     align-self: center;
     justify-self: center;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     width: 60px;
     height: 60px;
@@ -35,6 +38,7 @@
 }
 
 .dates__list > .date > span {
+    display: block;
     margin-top: 8px;
 }
 
@@ -59,6 +63,30 @@
     color: #FFFFFF;
     background-color: #DBDBDB;
 }
+
+.events-mini {
+    display: flex;
+    transform: translate(0, -12px);
+}
+
+.events-mini > .blue,
+.events-mini > .grey {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+}
+
+.events-mini > .blue {
+    background-color: rgba(0, 37, 255, 1);
+    margin-right: 2px;
+}
+
+.events-mini > .grey {
+    background-color: rgba(196, 196, 196, 1);
+    margin-left: 2px;
+}
+
 .inside__container > .dates__list {
     display: grid;
     grid-template-columns: repeat(7, 67px);
@@ -328,10 +356,38 @@
 .date-detail__body > .date-detail__main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     width: 543px;
     height: 488px;
+}
+
+.date-detail__wrapper > .no-events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 176px;
+
+    width: 432px;
+}
+
+.no-events > p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.no-events > .create-event {
+    width: 352px;
+    height: 48px;
+
+    border-radius: 38px;
+    background-color: rgba(185, 36, 255, 1);
+    border: none;
+
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 16px;
 }
 :root {
     --main-grey: rgba(180, 180, 180, 1);

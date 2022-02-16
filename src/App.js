@@ -1,15 +1,19 @@
 import React from "react";
 import Calendar from "./Calendar/components/Calendar";
 import DateDetail from "./DateDetail/components/DateDetail";
+import {connect} from "react-redux";
 
 
-function App() {
+function App(props) {
     return (
         <div className="calendar__wrapper">
             <Calendar/>
-            <DateDetail/>
+            <DateDetail date={props.store.calendar.checkedDate}/>
         </div>
     )
 }
 
-export default App;
+export default connect(
+    state => ({store: state}),
+    dispatch => ({})
+)(App);

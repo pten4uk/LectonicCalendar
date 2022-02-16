@@ -1,8 +1,11 @@
 .dates__list > .date {
     align-self: center;
     justify-self: center;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     width: 60px;
     height: 60px;
@@ -34,6 +37,7 @@
 }
 
 .dates__list > .date > span {
+    display: block;
     margin-top: 8px;
 }
 
@@ -57,4 +61,27 @@
 .dates__list > .weekend {
     color: #FFFFFF;
     background-color: #DBDBDB;
+}
+
+.events-mini {
+    display: flex;
+    transform: translate(0, -12px);
+}
+
+.events-mini > .blue,
+.events-mini > .grey {
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+}
+
+.events-mini > .blue {
+    background-color: rgba(0, 37, 255, 1);
+    margin-right: 2px;
+}
+
+.events-mini > .grey {
+    background-color: rgba(196, 196, 196, 1);
+    margin-left: 2px;
 }

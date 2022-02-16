@@ -1,14 +1,20 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {WEEK_DAYS} from "../utils/calendar";
-import {SetCheckedDate} from "../../redux/actions/calendar";
+import {SetCheckedDate, SwapMonthToNext, SwapMonthToPrev} from "../../redux/actions/calendar";
+import {checkEqualDates, checkNeedSwapToNextMonth, checkNeedSwapToPrevMonth} from "../utils/date";
 
 
 function Date(props) {
-
     return (
-        <div className={getClassName(props)} onClick={() => props.SetCheckedDate(props.date)}>
+        <div className={getClassName(props)} onClick={() => clickHandler(props)}>
             <span>{props.date.getDate()}</span>
+            {props.date.getFullYear() === 2022 &&
+        props.date.getMonth() === 1 &&
+        props.date.getDate() === 18 ? (<div className="events-mini">
+                <div className="blue"/>
+                <div className="grey"/>
+            </div>) : ""}
         </div>
     )
 }
@@ -17,17 +23,16 @@ export default connect(
     state => ({store: state.calendar}),
     dispatch => ({
         SetCheckedDate:
-            date => dispatch(SetCheckedDate(date))
+            date => dispatch(SetCheckedDate(date)),
+        SwapMonthToNext:
+            () => dispatch(SwapMonthToNext()),
+        SwapMonthToPrev:
+            () => dispatch(SwapMonthToPrev()),
     })
 )(Date);
 
-function checkEqualDates(date1, date2) {
-    if (date1 && date2) {
-        return (date1.getFullYear() === date2.getFullYear() &&
-            date1.getMonth() === date2.getMonth() &&
-            date1.getDate() === date2.getDate())
-    } else return false
-}
+
+
 
 function getClassName(props) {
     let className = "date";
@@ -41,4 +46,13 @@ function getClassName(props) {
     if (checkEqualDates(props.date, props.store.checkedDate)) className += " active"
 
     return className
+}
+
+function clickHandler(props) {
+    if (checkNeedSwapToNextMonth(props.date, props.store.currentDate)) {
+        props.SwapMonthToNext();
+    } else if (checkNeedSwapToPrevMonth(props.date, props.store.currentDate)) {
+        props.SwapMonthToPrev()
+    }
+    props.SetCheckedDate(props.date)
 }
