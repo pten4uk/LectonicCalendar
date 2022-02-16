@@ -15,6 +15,9 @@ function DateDetail(props) {
                     <Event/>
                     <Event/>
                     <Event/>
+                    <Event/>
+                    <Event/>
+                    <Event/>
                 </main>
             </div>
         </div>

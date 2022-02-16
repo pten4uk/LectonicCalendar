@@ -7,14 +7,14 @@
 
 .dates__list > .dates__underlines {
     position: absolute;
-    transform: translate(0, -5px);
+    transform: translate(0, -2px);
     width: 492px;
 }
 
 .dates__underlines > .dates__underline {
     height: 1px;
-    margin-top: 72px;
-    background-color: #DBDBDB;
+    margin-top: 71px;
+    background-color: var(--main-border-color);
 }
 
 @import "Date.css";

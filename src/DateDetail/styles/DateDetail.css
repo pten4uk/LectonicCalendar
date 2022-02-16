@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     height: 621px;
     width: 571px;
@@ -12,9 +12,21 @@
     margin-left: 78px;
 }
 
+.date-detail__wrapper::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 560px;
+    height: 60px;
+    background: linear-gradient(transparent 20%, white 80%);
+}
+
 .date-detail__wrapper > .date-detail__header {
     position: absolute;
-    top: 119px;
+    top: 58px;
 
     display: flex;
     align-self: flex-start;
@@ -40,7 +52,8 @@
 
 .date-detail__body {
     width: 100%;
-    height: 381px;
+    height: 488px;
+    transform: translate(0, -10px);
 
     overflow-y: scroll;
 }
@@ -65,10 +78,8 @@
     flex-direction: column;
     justify-content: space-between;
 
-    margin-top: 66px;
-
     width: 543px;
-    height: 276px;
+    height: 488px;
 }
 
 

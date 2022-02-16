@@ -33,6 +33,10 @@
     bottom: 48px;
 
     height: 515px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @import "DatesList/DatesList.css";

@@ -9,9 +9,9 @@ function MonthNav(props) {
 
     return (
         <nav className="month-nav">
-            <button className="left" onClick={props.SwapMonthToPrev}/>
+            <div onClick={props.SwapMonthToPrev}><button className="left"/></div>
             <span>{getMonth(currentMonth)}</span>
-            <button className="right" onClick={props.SwapMonthToNext}/>
+            <div onClick={props.SwapMonthToNext}><button className="right"/></div>
         </nav>
     )
 }
