@@ -5,5 +5,11 @@
     --main-border-color: rgba(219, 219, 219, 1);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import "./Lecturer/styles/Lecturer.css";
 @import "./Calendar/styles/Calendar.css";
 @import "./DateDetail/styles/DateDetail.css";

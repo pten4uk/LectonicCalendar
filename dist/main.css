@@ -1,4 +1,153 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap);
+.lecture__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 316px;
+
+    box-shadow: 0 4px 40px rgba(0, 37, 255, 0.1);
+    border-radius: 18px;
+}
+
+.lecture__card > .photo {
+    margin-top: 28px;
+}
+
+.lecture__card > .card-header {
+    margin-top: 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.lecture__card > .card-body {
+    margin-top: 4px;
+
+    width: 200px;
+
+    text-align: center;
+    font-size: 12px;
+}
+
+.lecture__card > button {
+    margin-top: 60px;
+
+    width: 200px;
+    height: 40px;
+
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: transparent;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+.full__profile {
+    width: 100%;
+}
+
+.full__profile > .lecturer__background {
+    width: 100%;
+}
+
+.full__profile > .lecturer__background > img {
+    width: 100%;
+}
+
+.full__profile > .lecturer__main {
+    position: absolute;
+    top: 444px;
+
+    width: 100%;
+    height: 3000px;
+
+    background-color: white;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .2);
+}
+
+.lecturer__main > .lecturer__wrapper {
+    position: absolute;
+    left: 60px;
+    height: 100%;
+}
+
+.lecturer__wrapper > .lecturer__profile {
+    position: absolute;
+    top: -48px;
+    left: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 48px;
+
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -20px 40px rgba(0, 0, 0, .1);
+
+    color: rgba(0, 37, 255, 1);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.lecturer__wrapper > .in-projects {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 39px;
+}
+
+.lecturer__main .header {
+    margin-bottom: 20px;
+}
+
+.in-projects > .projects {
+    display: flex;
+}
+
+.projects > .project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 12px;
+
+    width: 167px;
+    height: 36px;
+
+    background-color: rgba(219, 219, 219, 1);
+    border-radius: 45px;
+
+    font-weight: 700;
+}
+
+.projects > .project > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    transform: translate(10px, -13px);
+
+    font-weight: 500;
+    color: white;
+    font-size: 11px;
+
+    background-color: rgba(95, 181, 255, 1);
+}
+
+.created-lectures {
+    margin-top: 51px;
+}
 .dates__list > .date {
     align-self: center;
     justify-self: center;
@@ -395,4 +544,9 @@
 :root {
     --main-grey: rgba(180, 180, 180, 1);
     --main-border-color: rgba(219, 219, 219, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
