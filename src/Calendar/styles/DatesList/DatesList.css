@@ -1,9 +1,8 @@
 .inside__container > .dates__list {
     display: grid;
-    grid-template-columns: repeat(7, 60px);
-    grid-template-rows: repeat(6, 60px);
-    grid-gap: 12px;
-    justify-content: center;
+    grid-template-columns: repeat(7, 67px);
+    grid-template-rows: repeat(6, 67px);
+    grid-gap: 5px;
 }
 
 .dates__list > .dates__underlines {
@@ -14,7 +13,7 @@
 
 .dates__underlines > .dates__underline {
     height: 1px;
-    margin-top: 71px;
+    margin-top: 72px;
     background-color: #DBDBDB;
 }
 

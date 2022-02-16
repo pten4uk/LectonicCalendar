@@ -1,4 +1,6 @@
 .dates__list > .date {
+    align-self: center;
+    justify-self: center;
     display: flex;
     justify-content: center;
 
@@ -25,6 +27,11 @@
 
 .dates__list > .date > span {
     margin-top: 8px;
+}
+
+.dates__list > .today {
+    /*color: #B4B4B4;*/
+    border: 3px solid #B4B4B4;
 }
 
 .dates__list > .inactive {

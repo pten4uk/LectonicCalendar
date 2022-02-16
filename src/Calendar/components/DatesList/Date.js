@@ -17,11 +17,16 @@ export default connect(
 )(Date);
 
 function getClassName(props) {
+    let className = "date";
+
     if (props.store.currentDate.getMonth() !==
-        props.date.getMonth()) {return "date inactive"}
-    if (props.date.getDay() === WEEK_DAYS.Saturday ||
-        props.date.getDay() === WEEK_DAYS.Sunday) {
-        return "date weekend"
-    }
-    return "date"
+        props.date.getMonth()) className += " inactive";
+    else if (props.date.getDay() === WEEK_DAYS.Saturday ||
+        props.date.getDay() === WEEK_DAYS.Sunday) className += " weekend";
+
+    if (props.date.getFullYear() === props.store.today.getFullYear() &&
+        props.date.getMonth() === props.store.today.getMonth() &&
+        props.date.getDate() === props.store.today.getDate()
+    ) className += " today"
+    return className
 }
