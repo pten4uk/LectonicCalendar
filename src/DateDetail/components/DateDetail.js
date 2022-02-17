@@ -26,7 +26,23 @@ function DateDetail(props) {
             </header>
             <div className="date-detail__body">
                 <main className="date-detail__main">
-                    {events.map((event, index) => <Event key={index}/>)}
+                    {events.map((event, index) => {
+                        return event.status ?
+                            <Event key={index}
+                                   header="Лекция подтверждена"
+                                   status={false}
+                                   theme={event.theme}
+                                   lecturer={event.lecturer}
+                                   listener={event.listener}
+                                   address={event.address}/> :
+                            <Event key={index}
+                                   header="Лекция не подтверждена"
+                                   status={true}
+                                   theme={event.theme}
+                                   lecturer={event.lecturer}
+                                   listener={event.listener}
+                                   address={event.address}/>
+                    } )}
                 </main>
             </div>
         </div>

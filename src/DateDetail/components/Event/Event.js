@@ -1,20 +1,24 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 
 
 function Event(props) {
+    let [className, setClass] = useState("left-block");
+    useEffect(() => {
+        if (props.status) setClass("left-block grey");
+    }, [])
     return (
         <li className="date-detail__event">
-            <div className="left-block">
+            <div className={className}>
                 <div className="circle"/>
                 <div className="dynamic-circle"/>
             </div>
             <div className="event-info">
-                <div className="header">Лекция подтверждена</div>
-                <div className="theme">Тема: <span>Доноры России</span></div>
-                <div className="lecturer">Лектор: <span>Евлампий Питрович Игорь</span></div>
-                <div className="listener">Слушатель: <span>ОАО "Мокрые штаны"</span></div>
-                <div className="address">Место: <span>Москва, ул. Не строителей, д. 98738</span></div>
+                <div className="header">{props.header}</div>
+                <div className="theme">Тема: <span>{props.theme}</span></div>
+                <div className="lecturer">Лектор: <span>{props.lecturer}</span></div>
+                <div className="listener">Слушатель: <span>{props.listener}</span></div>
+                <div className="address">Место: <span>{props.address}</span></div>
             </div>
             <div className="time-range">
                 <span className="start">10:00</span>

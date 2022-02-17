@@ -18,6 +18,10 @@
     background-color: rgba(0, 37, 255, 1);
 }
 
+.left-block.grey > .circle {
+    background-color: rgba(180, 180, 180, 1);
+}
+
 .date-detail__event > .left-block > .dynamic-circle {
     margin-top: 4px;
 
@@ -28,8 +32,12 @@
     background-color: rgba(0, 37, 255, 1);
 }
 
+.left-block.grey > .dynamic-circle {
+    background-color: rgba(180, 180, 180, 1);
+}
+
 .date-detail__event > .event-info {
-    transform: translate(-95px, 0);
+    margin-left: 12px;
 }
 
 .date-detail__event > .event-info > .theme,
@@ -46,6 +54,7 @@
 
 
 .date-detail__event > .event-info > .header {
+    margin-bottom: 0;
     font-weight: 700;
 }
 
