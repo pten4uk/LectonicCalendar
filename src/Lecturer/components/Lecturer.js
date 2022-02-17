@@ -31,9 +31,9 @@ function Lecturer(props) {
                     Дополнительная информация
                 </div>
                 <div className="profile-name">
-                    <span>Гырцишгыц</span>
-                    <span>Мурланович</span>
-                    <span>Жевтенченчинко</span>
+                    <span>Марк</span>
+                    <span>Туллий</span>
+                    <span>Цицерон</span>
                 </div>
             </div>
             <main className="lecturer__main">
