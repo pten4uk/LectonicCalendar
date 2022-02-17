@@ -1,6 +1,4 @@
 .full__profile {
-    display: flex;
-    justify-content: center;
     width: 100%;
 
     font-family: 'Montserrat', sans-serif;
@@ -8,9 +6,7 @@
 }
 
 .full__profile > .lecturer__background {
-    position: fixed;
     width: 100%;
-    height: 100vh;
 }
 
 .full__profile > .lecturer__background > img {
@@ -21,7 +17,7 @@
     position: absolute;
     top: 444px;
 
-    width: 1500px;
+    width: 100%;
     height: 2200px;
 
     background-color: white;
