@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {connect} from "react-redux";
 import bg from "../img/bg.svg"
 import photo_profile from "../img/profile_photo.png"
@@ -15,9 +15,30 @@ import LectureCard from "./LectureCard";
 import PotentialCard from "./PotentialCard";
 import Calendar from "../../Calendar/components/Calendar";
 import DateDetail from "../../DateDetail/components/DateDetail";
+import Customer from "./Customer";
 
 
 function Lecturer(props) {
+    let [lecturer, swapLecturer] = useState(true);
+    let l_profile = useRef();
+    let c_profile = useRef();
+
+    useEffect(() => {
+        activateCustomer();
+    }, [])
+
+    function activateLecturer() {
+        swapLecturer(true);
+        l_profile.current.classList.add("active")
+        c_profile.current.classList.remove("active")
+    }
+    function activateCustomer() {
+        swapLecturer(false);
+        c_profile.current.classList.add("active")
+        l_profile.current.classList.remove("active")
+    }
+
+
     return (
         <div className="full__profile">
             <div className="lecturer__background"><img src={bg} alt="Фон"/></div>
@@ -36,9 +57,13 @@ function Lecturer(props) {
                     <span>Цицерон</span>
                 </div>
             </div>
+            <div className="lecturer__profile"
+                 onClick={() => {swapLecturer(true); activateLecturer()}} ref={l_profile}>Лектор</div>
+            <div className="customer__profile"
+                 onClick={() => {swapLecturer(false); activateCustomer()}} ref={c_profile}>Заказчик</div>
+            {lecturer ?
             <main className="lecturer__main">
                 <div className="lecturer__wrapper">
-                    <div className="lecturer__profile">Лектор</div>
                     <section className="in-projects">
                         <div className="header">Участие в проектах</div>
                         <div className="projects">
@@ -104,7 +129,8 @@ function Lecturer(props) {
                         </div>
                     </section>
                 </div>
-            </main>
+            </main> :
+                <Customer lecturer={lecturer}/>}
         </div>
     )
 }
