@@ -1,5 +1,8 @@
 .full__profile {
     width: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .full__profile > .lecturer__background {
@@ -21,6 +24,58 @@
     box-shadow: 0 0 60px rgba(0, 0, 0, .2);
 }
 
+.lecturer__profile__header {
+    display: flex;
+    position: absolute;
+    top: 108px;
+    left: 60px;
+
+    z-index: 5;
+}
+
+.lecturer__profile__header > .profile-photo > img {
+    width: 160px;
+    height: 160px;
+}
+
+.additional-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    top: 188px;
+
+    text-decoration: underline;
+    color: rgba(0, 37, 255, 1);
+    font-size: 12px;
+}
+
+.additional-info > .edit-photo {
+    margin-right: 12px;
+}
+
+.profile-photo > .edit-photo {
+    position: absolute;
+    bottom: 0;
+
+    width: 60px;
+    height: 36px;
+}
+
+.profile-name {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 28px;
+
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.profile-name > span {
+    margin-bottom: 4px;
+}
 .lecturer__main > .lecturer__wrapper {
     position: absolute;
     left: 60px;
@@ -30,7 +85,6 @@
 .lecturer__wrapper > .lecturer__profile {
     position: absolute;
     top: -48px;
-    left: 60px;
 
     display: flex;
     justify-content: center;
@@ -104,4 +158,75 @@
     margin-top: 51px;
 }
 
+section > .header {
+    display: flex;
+}
+section > .header > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 24px;
+    height: 24px;
+
+    margin-left: 8px;
+    transform: translate(0, -3px);
+
+    background-color: rgba(219, 219, 219, 1);
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.lecture__cards {
+    display: flex;
+}
+
+.potential-orders {
+    margin-top: 51px;
+}
+
+.lecture__cards > .lecture__card__empty {
+    margin-right: 12px;
+}
+
+
+.confirmed-lectures {
+    margin-top: 103px;
+}
+
+.lecturer-calendar {
+    margin-top: 51px;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 28px;
+    align-items: center;
+}
+
+.bottom > .header {
+    margin-right: 12px;
+}
+
+.bottom > .header > span {
+    justify-self: center;
+    width: 12px;
+    height: 12px;
+
+    margin-right: 8px;
+
+    transform: translate(0, 3px);
+}
+
+.bottom > .header > .first {
+    background-color: rgba(180, 180, 180, 1);
+}
+
+.bottom > .header > .second {
+    background-color: rgba(0, 37, 255, 1);
+}
+
 @import "LectureCard.css";
+@import "PotentialCard.css";

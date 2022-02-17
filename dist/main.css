@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap);
 .lecture__card {
     display: flex;
     flex-direction: column;
@@ -42,9 +42,79 @@
 
     font-size: 16px;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
+.potential__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 316px;
+
+    margin-left: 12px;
+
+    box-shadow: 0 4px 40px rgba(0, 6, 32, 0.2);
+    border-radius: 18px;
+
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.potential__card:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.potential__card:hover {
+    transform: scale(1.01);
+}
+
+.potential__card > .photo {
+    margin-top: 28px;
+}
+
+.potential__card > .card-header {
+    margin-top: 8px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.potential__card > .card-body {
+    margin-top: 4px;
+
+    width: 200px;
+    height: 60px;
+
+    text-align: center;
+    font-size: 12px;
+}
+
+.potential__card > button {
+    margin-top: 10px;
+
+    width: 200px;
+    height: 40px;
+
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(219, 219, 219, 1);
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.potential__card > button:hover {
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
 .full__profile {
     width: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .full__profile > .lecturer__background {
@@ -66,6 +136,58 @@
     box-shadow: 0 0 60px rgba(0, 0, 0, .2);
 }
 
+.lecturer__profile__header {
+    display: flex;
+    position: absolute;
+    top: 108px;
+    left: 60px;
+
+    z-index: 5;
+}
+
+.lecturer__profile__header > .profile-photo > img {
+    width: 160px;
+    height: 160px;
+}
+
+.additional-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    top: 188px;
+
+    text-decoration: underline;
+    color: rgba(0, 37, 255, 1);
+    font-size: 12px;
+}
+
+.additional-info > .edit-photo {
+    margin-right: 12px;
+}
+
+.profile-photo > .edit-photo {
+    position: absolute;
+    bottom: 0;
+
+    width: 60px;
+    height: 36px;
+}
+
+.profile-name {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 28px;
+
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.profile-name > span {
+    margin-bottom: 4px;
+}
 .lecturer__main > .lecturer__wrapper {
     position: absolute;
     left: 60px;
@@ -75,7 +197,6 @@
 .lecturer__wrapper > .lecturer__profile {
     position: absolute;
     top: -48px;
-    left: 60px;
 
     display: flex;
     justify-content: center;
@@ -147,6 +268,76 @@
 
 .created-lectures {
     margin-top: 51px;
+}
+
+section > .header {
+    display: flex;
+}
+section > .header > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 24px;
+    height: 24px;
+
+    margin-left: 8px;
+    transform: translate(0, -3px);
+
+    background-color: rgba(219, 219, 219, 1);
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.lecture__cards {
+    display: flex;
+}
+
+.potential-orders {
+    margin-top: 51px;
+}
+
+.lecture__cards > .lecture__card__empty {
+    margin-right: 12px;
+}
+
+
+.confirmed-lectures {
+    margin-top: 103px;
+}
+
+.lecturer-calendar {
+    margin-top: 51px;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 28px;
+    align-items: center;
+}
+
+.bottom > .header {
+    margin-right: 12px;
+}
+
+.bottom > .header > span {
+    justify-self: center;
+    width: 12px;
+    height: 12px;
+
+    margin-right: 8px;
+
+    transform: translate(0, 3px);
+}
+
+.bottom > .header > .first {
+    background-color: rgba(180, 180, 180, 1);
+}
+
+.bottom > .header > .second {
+    background-color: rgba(0, 37, 255, 1);
 }
 .dates__list > .date {
     align-self: center;
@@ -324,11 +515,9 @@
 }
 .calendar__wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
 
     width: 100%;
-    height: 100vh;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -533,6 +722,8 @@
     width: 352px;
     height: 48px;
 
+    margin-top: 28px;
+
     border-radius: 38px;
     background-color: rgba(185, 36, 255, 1);
     border: none;
@@ -540,6 +731,7 @@
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 :root {
     --main-grey: rgba(180, 180, 180, 1);

@@ -7,11 +7,9 @@ import Lecturer from "./Lecturer/components/Lecturer";
 
 function App(props) {
     return (
-        <div className="calendar__wrapper">
+        <>
             <Lecturer/>
-            {/*<Calendar/>*/}
-            {/*<DateDetail date={props.store.calendar.checkedDate}/>*/}
-        </div>
+        </>
     )
 }
 

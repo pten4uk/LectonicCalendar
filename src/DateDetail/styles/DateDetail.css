@@ -101,6 +101,8 @@
     width: 352px;
     height: 48px;
 
+    margin-top: 28px;
+
     border-radius: 38px;
     background-color: rgba(185, 36, 255, 1);
     border: none;
@@ -108,6 +110,7 @@
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @import "./Event/Event.css";
