@@ -24,7 +24,7 @@ function Lecturer(props) {
     let c_profile = useRef();
 
     useEffect(() => {
-        activateCustomer();
+        activateLecturer();
     }, [])
 
     function activateLecturer() {
