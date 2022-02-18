@@ -53,7 +53,8 @@ function DateDetail(props) {
             </header>
             <div className="no-events">
                 <p>На данный момент у Вас нет запланированных мероприятий.</p>
-                <p>Вы можете создать одно или несколько мероприятий, чтобы потенциальные слушатели могли откликнуться</p>
+                <p>Вы можете создать одно или несколько мероприятий,
+                    чтобы потенциальные слушатели могли откликнуться</p>
                 <button className="create-event">Создать мероприятие</button>
             </div>
         </div>
@@ -63,6 +64,7 @@ export default connect(
     state => ({store: state}),
     dispatch => ({})
 )(DateDetail);
+
 
 function getMonth(month) {
     let newMonth = month + 1;
