@@ -17,8 +17,8 @@ import lecturer7 from "../img/lecturer7.svg"
 
 import LectureCard from "./LectureCard";
 import PotentialCard from "./PotentialCard";
-import Calendar from "../../Calendar/components/Calendar";
-import DateDetail from "../../DateDetail/components/DateDetail";
+import Calendar from "../../Calendar/Calendar/components/Calendar";
+import DateDetail from "../../Calendar/DateDetail/components/DateDetail";
 import photo1 from "../img/photo1.svg";
 
 

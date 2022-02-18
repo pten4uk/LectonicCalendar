@@ -113,4 +113,4 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-@import "./Event/Event.css";
+@import "Event/Event.css";

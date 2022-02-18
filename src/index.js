@@ -7,8 +7,8 @@ import {combineReducers} from "redux";
 
 import "./index.css";
 import App from "./App";
-import dateDetail from "./DateDetail/redux/reducers/dateDetail";
-import calendar from "./Calendar/redux/reducers/calendar";
+import dateDetail from "./Calendar/DateDetail/redux/reducers/dateDetail";
+import calendar from "./Calendar/Calendar/redux/reducers/calendar";
 
 
 let reducer = combineReducers({

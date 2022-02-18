@@ -13,8 +13,8 @@ import card5 from "../img/potential5.svg"
 
 import LectureCard from "./LectureCard";
 import PotentialCard from "./PotentialCard";
-import Calendar from "../../Calendar/components/Calendar";
-import DateDetail from "../../DateDetail/components/DateDetail";
+import Calendar from "../../Calendar/Calendar/components/Calendar";
+import DateDetail from "../../Calendar/DateDetail/components/DateDetail";
 import Customer from "./Customer";
 
 

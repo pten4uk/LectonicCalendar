@@ -11,5 +11,5 @@
 }
 
 @import "./Lecturer/styles/Lecturer.css";
-@import "./Calendar/styles/Calendar.css";
-@import "./DateDetail/styles/DateDetail.css";
+@import "Calendar/Calendar/styles/Calendar.css";
+@import "Calendar/DateDetail/styles/DateDetail.css";
