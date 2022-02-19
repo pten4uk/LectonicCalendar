@@ -1,8 +1,9 @@
-.inside__container > .dates__list {
+.dates__list {
     display: grid;
     grid-template-columns: repeat(7, 67px);
     grid-template-rows: repeat(6, 67px);
     grid-gap: 5px;
+    transform: translate(50%, 0);
 }
 
 .dates__list > .dates__underlines {
@@ -17,4 +18,5 @@
     background-color: var(--main-border-color);
 }
 
+@import "DatesListSwappable.css";
 @import "Date.css";

@@ -1,0 +1,38 @@
+.dates-list__wrapper {
+    display: flex;
+}
+
+.dates-list__left-enter {
+    transform: translate(0, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__left-enter-active {
+    transform: translate(-50%, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__left-exit {
+    transform: translate(-50%, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__left-exit-active {
+    transform: translate(-50%, 0) !important;
+    transition: transform .5s;
+}
+
+
+.dates-list__right-enter {
+    transform: translate(0, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__right-enter-active {
+    transform: translate(50%, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__right-exit {
+    transform: translate(50%, 0) !important;
+    transition: transform .5s;
+}
+.dates-list__right-exit-active {
+    transform: translate(50%, 0) !important;
+    transition: transform .5s;
+}
