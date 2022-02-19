@@ -37,6 +37,11 @@ export default function calendar(state = initialState, action) {
                 ...state,
                 checkedDate: action.payload.date
             }
+        case "DEACTIVATE_SWAP":
+            return {
+                ...state,
+                swap: false,
+            }
         default:
             return state
     }

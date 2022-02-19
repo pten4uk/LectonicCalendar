@@ -6,9 +6,6 @@ import DatesList from "./DatesList";
 
 
 function DatesListSwappable(props) {
-    let [swap, setSwap] = useState(false);
-    let [right, setToRight] = useState(false);
-    let [left, setToLeft] = useState(false);
 
     useEffect(() => {
     }, [props.store.swap])

@@ -7,3 +7,4 @@ export function SwapMonthToPrev() {
 export function SetCheckedDate(date) {
     return {type: "SET_ACTIVE_DATE", payload: {date: date}}
 }
+
