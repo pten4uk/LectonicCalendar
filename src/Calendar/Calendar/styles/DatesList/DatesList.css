@@ -3,15 +3,9 @@
     grid-template-columns: repeat(7, 67px);
     grid-template-rows: repeat(6, 67px);
     grid-gap: 5px;
+    margin: 0 44px;
 }
 
-.dates__list.from-left {
-    transform: translate(-50%, 0);
-}
-
-.dates__list.from-right {
-    transform: translate(50%, 0);
-}
 
 .dates__list > .dates__underlines {
     position: absolute;

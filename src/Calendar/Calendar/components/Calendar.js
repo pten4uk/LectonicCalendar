@@ -4,6 +4,7 @@ import MonthNav from "./MonthNav";
 import DaysOfWeek from "./DaysOfWeek";
 import {connect} from "react-redux";
 import DatesListSwappable from "./DatesList/DatesListSwappable";
+import SecondSwappable from "./DatesList/DatesListSwappable";
 
 
 function Calendar(props) {

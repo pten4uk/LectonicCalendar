@@ -13,7 +13,7 @@ function DatesList(props) {
     let classNames = "dates__list " + props.store.classSide;
 
     return (
-        <section className={classNames}>
+        <section className="dates__list">
             {calendar.map((date, index) => {
                 return <Date key={index} date={date}/>
             })}

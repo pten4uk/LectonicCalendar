@@ -388,6 +388,25 @@ section > .header > span {
     text-align: center;
     font-size: 12px;
 }
+.dates-list__wrapper {
+    display: flex;
+
+}
+
+.dates-list__wrapper.swap-left {
+    transform: translateX(-587px);
+    transition: transform .2s;
+}
+.dates-list__wrapper.swap-right {
+    transform: translateX(587px);
+    transition: transform .2s;
+}
+
+.dates-list__wrapper.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .dates__list > .date {
     align-self: center;
     justify-self: center;
@@ -479,12 +498,14 @@ section > .header > span {
     margin-left: 2px;
 }
 
-.inside__container > .dates__list {
+.dates__list {
     display: grid;
     grid-template-columns: repeat(7, 67px);
     grid-template-rows: repeat(6, 67px);
     grid-gap: 5px;
+    margin: 0 44px;
 }
+
 
 .dates__list > .dates__underlines {
     position: absolute;
@@ -565,8 +586,10 @@ section > .header > span {
 .calendar__wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     width: 100%;
+    height: 100vh;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -582,6 +605,8 @@ section > .header > span {
 
     background-color: #F5F5F5;
     border-radius: 18px;
+
+    overflow: hidden;
 }
 
 .calendar__wrapper > .calendar__container > .inside__container {

@@ -6,8 +6,7 @@ const initialState = {
     checkedDate: date,
     swap: false,
     datesListIndex: 0,
-    swapToLeft: false,
-    classSide: "from-left"
+    swapSideClass: ""
 }
 
 export default function calendar(state = initialState, action) {
@@ -17,8 +16,7 @@ export default function calendar(state = initialState, action) {
                 ...state,
                 swap: true,
                 datesListIndex: 1,
-                swapToLeft: true,
-                classSide: "from-left",
+                swapSideClass: "swap-left",
                 currentDate: new Date(
                     state.currentDate.getFullYear(),
                     state.currentDate.getMonth() + 1
@@ -29,8 +27,7 @@ export default function calendar(state = initialState, action) {
                 ...state,
                 swap: true,
                 datesListIndex: 2,
-                classSide: "from-right",
-                swapToLeft: false,
+                swapSideClass: "swap-right",
                 currentDate: new Date(
                     state.currentDate.getFullYear(),
                     state.currentDate.getMonth() - 1
@@ -46,6 +43,11 @@ export default function calendar(state = initialState, action) {
                 ...state,
                 swap: false,
                 datesListIndex: 0,
+            }
+        case "DEACTIVATE_SWAP_CLASS":
+            return {
+                ...state,
+                swapSideClass: ""
             }
         default:
             return state

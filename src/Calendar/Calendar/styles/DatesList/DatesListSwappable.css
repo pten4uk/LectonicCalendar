@@ -1,5 +1,15 @@
 .dates-list__wrapper {
     display: flex;
+
+}
+
+.dates-list__wrapper.swap-left {
+    transform: translateX(-587px);
+    transition: transform .2s;
+}
+.dates-list__wrapper.swap-right {
+    transform: translateX(587px);
+    transition: transform .2s;
 }
 
 .dates-list__wrapper.reverse {

@@ -10,4 +10,7 @@ export function SetCheckedDate(date) {
 export function DeactivateSwap() {
     return {type: "DEACTIVATE_SWAP"}
 }
+export function DeactivateSwapClass() {
+    return {type: "DEACTIVATE_SWAP_CLASS"}
+}
 
