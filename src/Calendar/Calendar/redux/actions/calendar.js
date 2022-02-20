@@ -7,4 +7,7 @@ export function SwapMonthToPrev() {
 export function SetCheckedDate(date) {
     return {type: "SET_ACTIVE_DATE", payload: {date: date}}
 }
+export function DeactivateSwap() {
+    return {type: "DEACTIVATE_SWAP"}
+}
 

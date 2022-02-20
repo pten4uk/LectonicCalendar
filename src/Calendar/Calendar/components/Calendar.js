@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from "react";
 
 import MonthNav from "./MonthNav";
-import DatesList from "./DatesList/DatesList";
 import DaysOfWeek from "./DaysOfWeek";
 import {connect} from "react-redux";
-import {CSSTransition} from "react-transition-group";
 import DatesListSwappable from "./DatesList/DatesListSwappable";
 
 

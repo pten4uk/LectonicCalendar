@@ -10,8 +10,10 @@ function DatesList(props) {
     let month = props.store.currentDate.getMonth();
     let calendar = getCalendar(year, month);
 
+    let classNames = "dates__list " + props.store.classSide;
+
     return (
-        <section className="dates__list">
+        <section className={classNames}>
             {calendar.map((date, index) => {
                 return <Date key={index} date={date}/>
             })}

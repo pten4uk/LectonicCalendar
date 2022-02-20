@@ -20,6 +20,8 @@
 
     background-color: #F5F5F5;
     border-radius: 18px;
+
+    /*overflow: hidden;*/
 }
 
 .calendar__wrapper > .calendar__container > .inside__container {

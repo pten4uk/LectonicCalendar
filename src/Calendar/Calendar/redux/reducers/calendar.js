@@ -5,9 +5,9 @@ const initialState = {
     currentDate: date,
     checkedDate: date,
     swap: false,
-    classNameForSwap: "dates-list",
-    leftElemForSwap: true,
-    rightElemForSwap: false
+    datesListIndex: 0,
+    swapToLeft: false,
+    classSide: "from-left"
 }
 
 export default function calendar(state = initialState, action) {
@@ -16,7 +16,9 @@ export default function calendar(state = initialState, action) {
             return {
                 ...state,
                 swap: true,
-                classNameForSwap: "dates-list__left",
+                datesListIndex: 1,
+                swapToLeft: true,
+                classSide: "from-left",
                 currentDate: new Date(
                     state.currentDate.getFullYear(),
                     state.currentDate.getMonth() + 1
@@ -26,7 +28,9 @@ export default function calendar(state = initialState, action) {
             return {
                 ...state,
                 swap: true,
-                classNameForSwap: "dates-list__right",
+                datesListIndex: 2,
+                classSide: "from-right",
+                swapToLeft: false,
                 currentDate: new Date(
                     state.currentDate.getFullYear(),
                     state.currentDate.getMonth() - 1
@@ -41,6 +45,7 @@ export default function calendar(state = initialState, action) {
             return {
                 ...state,
                 swap: false,
+                datesListIndex: 0,
             }
         default:
             return state
