@@ -12,7 +12,3 @@
     transition: transform .2s;
 }
 
-.dates-list__wrapper.reverse {
-    display: flex;
-    flex-direction: row-reverse;
-}
