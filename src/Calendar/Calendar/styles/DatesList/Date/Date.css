@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: space-between;
 
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
 
     border-radius: 18px;
     background-color: #fff;
@@ -20,7 +20,7 @@
 
 .dates__list > .date:hover {
     font-weight: 700;
-    border: 3px solid var(--main-grey);
+    border: 2px solid var(--main-grey);
     box-shadow: 0 4px 10px rgba(0, 6, 32, .2);
 
     transform: scale(1.3);
@@ -29,11 +29,11 @@
 }
 
 .dates__list > .date.active {
-    transform: scale(1.3);
+    transform: scale(1.25);
 
     font-weight: 700;
 
-    border: 3px solid var(--main-grey);
+    border: 2px solid var(--main-grey);
     box-shadow: 0 4px 10px rgba(0, 6, 32, .2);
 
     z-index: 3;
@@ -42,11 +42,13 @@
 .dates__list > .date > span {
     display: block;
     margin-top: 8px;
+
+    font-size: 12px;
 }
 
 .dates__list > .today {
     font-weight: 700;
-    border: 3px solid var(--main-grey);
+    background-color: rgba(213, 242, 255, 1);
 }
 
 .dates__list > .inactive {
@@ -66,25 +68,4 @@
     background-color: #DBDBDB;
 }
 
-.events-mini {
-    display: flex;
-    transform: translate(0, -12px);
-}
-
-.events-mini > .blue,
-.events-mini > .grey {
-    width: 12px;
-    height: 12px;
-
-    border-radius: 50%;
-}
-
-.events-mini > .blue {
-    background-color: rgba(0, 37, 255, 1);
-    margin-right: 2px;
-}
-
-.events-mini > .grey {
-    background-color: rgba(196, 196, 196, 1);
-    margin-left: 2px;
-}
+@import "./Events/Events.css";

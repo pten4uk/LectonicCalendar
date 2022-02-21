@@ -1,20 +1,16 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
-import {WEEK_DAYS} from "../utils/calendar";
-import {SetCheckedDate, SwapMonthToNext, SwapMonthToPrev} from "../../redux/actions/calendar";
-import {checkEqualDates, checkNeedSwapToNextMonth, checkNeedSwapToPrevMonth} from "../utils/date";
+import {WEEK_DAYS} from "../../utils/calendar";
+import {SetCheckedDate, SwapMonthToNext, SwapMonthToPrev} from "../../../redux/actions/calendar";
+import {checkEqualDates, checkNeedSwapToNextMonth, checkNeedSwapToPrevMonth} from "../../utils/date";
+import Events from "./Events/Events";
 
 
 function Date(props) {
     return (
         <div className={getClassName(props)} onClick={() => clickHandler(props)}>
             <span>{props.date.getDate()}</span>
-            {props.date.getFullYear() === 2022 &&
-        props.date.getMonth() === 1 &&
-        props.date.getDate() === 18 ? (<div className="events-mini">
-                <div className="blue"/>
-                <div className="grey"/>
-            </div>) : ""}
+            <Events date={props.date}/>
         </div>
     )
 }

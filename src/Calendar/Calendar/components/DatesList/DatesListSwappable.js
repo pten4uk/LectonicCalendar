@@ -10,7 +10,7 @@ function DatesListSwappable(props) {
 
     useEffect(() => {
         setSwapClass("dates-list__wrapper " + props.store.swapSideClass)
-        setTimeout(() => {props.DeactivateSwapClass()}, 200)
+        setTimeout(() => {props.DeactivateSwapClass()}, 150)
     }, [props.store.swapSideClass])
 
     return (

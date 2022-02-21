@@ -4,11 +4,11 @@
 }
 
 .dates-list__wrapper.swap-left {
-    transform: translateX(-587px);
-    transition: transform .2s;
+    transform: translateX(-542px);
+    transition: transform .1s;
 }
 .dates-list__wrapper.swap-right {
-    transform: translateX(587px);
-    transition: transform .2s;
+    transform: translateX(542px);
+    transition: transform .1s;
 }
 

@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 function Event(props) {
     let [className, setClass] = useState("left-block");
     useEffect(() => {
-        if (props.status) setClass("left-block grey");
+        if (!props.status) setClass("left-block grey");
     }, [])
     return (
         <li className="date-detail__event">

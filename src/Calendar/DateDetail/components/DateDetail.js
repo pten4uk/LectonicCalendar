@@ -5,6 +5,7 @@ import {checkEqualDates} from "../../Calendar/components/utils/date";
 
 
 function DateDetail(props) {
+    let year = props.date.getFullYear();
     let month = getMonth(props.date.getMonth());
     let day = getDay(props.date.getDate());
     let [events, setEvents] = useState(null);
@@ -19,45 +20,43 @@ function DateDetail(props) {
             setEvents(null)
         }
     }, [props.date])
-    return events ? (
+
+    return (
         <div className="date-detail__wrapper">
             <header className="date-detail__header">
-                <span>{day}.{month}</span>
+                <span>{day}.{month}.{year}</span>
             </header>
-            <div className="date-detail__body">
+            {events ? 
+            (<div className="date-detail__body">
                 <main className="date-detail__main">
                     {events.map((event, index) => {
                         return event.status ?
                             <Event key={index}
                                    header="Лекция подтверждена"
-                                   status={false}
+                                   status={true}
                                    theme={event.theme}
                                    lecturer={event.lecturer}
                                    listener={event.listener}
                                    address={event.address}/> :
                             <Event key={index}
                                    header="Лекция не подтверждена"
-                                   status={true}
+                                   status={false}
                                    theme={event.theme}
                                    lecturer={event.lecturer}
                                    listener={event.listener}
                                    address={event.address}/>
                     } )}
                 </main>
-            </div>
-        </div>
-    ) :
-        <div className="date-detail__wrapper">
-            <header className="date-detail__header">
-                <span>{day}.{month}</span>
-            </header>
-            <div className="no-events">
+            </div>) : 
+            (<div className="no-events">
                 <p>На данный момент у Вас нет запланированных мероприятий.</p>
                 <p>Вы можете создать одно или несколько мероприятий,
                     чтобы потенциальные слушатели могли откликнуться</p>
                 <button className="create-event">Создать мероприятие</button>
             </div>
+            )}
         </div>
+    )
 }
 
 export default connect(

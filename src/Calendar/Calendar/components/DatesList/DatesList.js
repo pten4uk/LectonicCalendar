@@ -2,15 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 
 import {getCalendar} from "../utils/calendar";
-import Date from "./Date";
+import Date from "./Date/Date";
 
 
 function DatesList(props) {
     let year = props.store.currentDate.getFullYear();
     let month = props.store.currentDate.getMonth();
     let calendar = getCalendar(year, month);
-
-    let classNames = "dates__list " + props.store.classSide;
 
     return (
         <section className="dates__list">
