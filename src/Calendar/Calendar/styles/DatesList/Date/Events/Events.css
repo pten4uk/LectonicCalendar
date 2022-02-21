@@ -1,6 +1,10 @@
 .current-date-events {
     display: flex;
-    transform: translate(0, -12px);
+    justify-content: space-between;
+
+    width: 26px;
+
+    transform: translate(0, -9px);
 }
 
 @import "./Event.css";

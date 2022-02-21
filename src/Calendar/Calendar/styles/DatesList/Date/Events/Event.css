@@ -7,10 +7,8 @@
 
 .current-date-event.blue {
     background-color: rgba(0, 37, 255, 1);
-    margin-right: 2px;
 }
 
 .current-date-event.grey {
     background-color: rgba(196, 196, 196, 1);
-    margin-left: 2px;
 }
