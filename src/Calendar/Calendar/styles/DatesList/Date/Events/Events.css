@@ -1,5 +1,6 @@
 .current-date-events {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     width: 26px;
@@ -8,3 +9,5 @@
 }
 
 @import "./Event.css";
+@import "./EventMultiple.css";
+@import "./EventSame.css";

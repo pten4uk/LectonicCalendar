@@ -1,0 +1,18 @@
+.current-date-event-multiple > .event-same {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.event-same.blue {
+    background-color: rgba(0, 37, 255, 1);
+    border-radius: 50%;
+    z-index: 1;
+}
+.event-same.grey {
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 50%;
+    z-index: 2;
+}
