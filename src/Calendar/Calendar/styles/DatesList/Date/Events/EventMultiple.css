@@ -1,49 +1,47 @@
 .current-date-event-multiple {
-    height: 18px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .current-date-event-multiple > .event-multiple {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
+    width: 20px;
     height: 20px;
+
+    background-color: gray;
+    border-radius: 50%;
+
+    transform: translateY(4px);
 }
 
-.event-multiple.blue-half {
-    background-color: rgba(0, 37, 255, 1);
+.event-multiple.half-blue {
+    width: 10px;
     border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-    transform: translateX(calc(-50% + 5px));
-    z-index: 1;
-}
-.event-multiple.blue {
-    width: 20px;
     background-color: rgba(0, 37, 255, 1);
-    border-radius: 50%;
-    z-index: 1;
 }
 
-.event-multiple.grey-half {
-    background-color: rgba(196, 196, 196, 1);
+.event-multiple.half-grey {
+    width: 10px;
     border-radius: 100% 0 0 100% / 50% 0 0 50%;
-    transform: translateX(calc(-50% - 5px));
-    z-index: 2;
-}
-.event-multiple.grey {
-    width: 20px;
-    background-color: rgba(196, 196, 196, 1);
-    border-radius: 50%;
-    z-index: 2;
+    background-color: rgba(180, 180, 180, 1);
 }
 
-.current-date-event-multiple > span {
+.events-length {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(calc(-50%), calc(-50% + 1px));
-    z-index: 3;
+    transform: translate(-50%, calc(-50% + 4px));
 
     font-size: 11px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    color: white;
+}
+
+.event-multiple.hover-blue {
+    background-color: rgba(0, 37, 255, 1);
+}
+
+.event-multiple.hover-grey {
+    background-color: rgba(180, 180, 180, 1);
 }

@@ -5,10 +5,9 @@ function EventSame(props) {
 
     return  (
             <div className="current-date-event-multiple">
-                {props.confirmed ? 
-                    <div className="event-same blue"/> :
-                    <div className="event-same grey"/>}
-                <span>{props.events.length}</span> 
+                <div className={props.confirmed ? "event-same blue" : "event-same grey"}>
+                    <span>{props.events.length}</span>
+                </div>
             </div>
     )
 }

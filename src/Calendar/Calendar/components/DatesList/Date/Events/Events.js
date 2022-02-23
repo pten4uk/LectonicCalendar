@@ -2,25 +2,11 @@ import React, {useState, useEffect} from "react";
 import {connect} from "react-redux";
 
 import Event from "./Event";
-import {checkEqualDates} from "../../../utils/date";
 import EventMultiple from "./EventMultiple";
 import EventSame from "./EventSame";
 
 function Events(props) {
-    let [events, setEvents] = useState(null);
-
-    useEffect(() => {
-        let currentEvents = props.store.dateDetail.filter(value => {
-            return checkEqualDates(value.date, props.date)
-        })
-        if (currentEvents.length > 0) {
-            setEvents(currentEvents[0].events)
-        } else {
-            setEvents(null)
-        }
-    }, [props.date])
-
-
+    let events = props.events;
     return (
         <div className="current-date-events">
             { 
@@ -36,7 +22,9 @@ function Events(props) {
                     <Event confirmed={false}/>
                     <Event confirmed={true}/>
                 </> :
-                <EventMultiple events={events}/> : 
+                <EventMultiple events={events}
+                               dateHover={props.dateHover}
+                               dateActive={props.dateActive}/> :
                 <></>
             }
         </div>
