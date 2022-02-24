@@ -7,14 +7,20 @@ function Event(props) {
     let eventInfo = useRef();
     let [dynamicCircleHeight, setCircleHeight] = useState(24);
     let [eventDetail, setEventDetail] = useState(false);
+    let [eventDetailHeight, setEventHeight] = useState('0px');
 
     useEffect(() => {
         if (!props.status) setClass("left-block grey");
     }, [])
 
     useEffect(() => {
-        if (!eventDetail) setCircleHeight(24);
-        else setCircleHeight(eventInfo.current.clientHeight - 15.4);
+        if (!eventDetail) {
+            setEventHeight('42px');
+            setCircleHeight(24);
+        } else {
+            setEventHeight(`${eventInfo.current.scrollHeight}px`);
+            setCircleHeight(eventInfo.current.scrollHeight - 15.4);
+        }
     }, [eventDetail])
 
     return (
@@ -25,7 +31,8 @@ function Event(props) {
             </div>
             <div className="event-info"
                  ref={eventInfo}
-                 onClick={() => setEventDetail(!eventDetail)}>
+                 onClick={() => setEventDetail(!eventDetail)}
+                 style={{height: eventDetailHeight}}>
                 <div className="header">{props.header}</div>
                 <div className="theme">Тема: <span>{props.theme}</span></div>
                 <div className="lecturer">Лектор: <span>{props.lecturer}</span></div>

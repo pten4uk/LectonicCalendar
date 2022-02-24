@@ -403,6 +403,14 @@ section > .header > span {
 }
 
 
+@media screen and (max-width: 1900px) {
+    .dates-list__wrapper.swap-left {
+        transform: translateX(-482px);
+    }
+.dates-list__wrapper.swap-right {
+        transform: translateX(482px);
+    }
+}
 .current-date-event {
     width: 12px;
     height: 12px;
@@ -601,6 +609,26 @@ section > .header > span {
     margin-top: 66px;
     background-color: var(--main-border-color);
 }
+
+
+@media screen and (max-width: 1900px) {
+    .dates__list {
+        grid-template-columns: repeat(7, 58px);
+    }
+
+    .dates__list > .dates__underlines {
+        position: absolute;
+        transform: translate(2px, -2px);
+        width: 402px;
+    }
+
+    .dates__underlines > .dates__underline {
+        height: 1px;
+        margin-top: 66px;
+        background-color: var(--main-border-color);
+    }
+
+}
 .inside__container > .month-nav {
     display: flex;
     margin-bottom: 15px;
@@ -667,6 +695,16 @@ section > .header > span {
 
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1900px) {
+    .inside__container > .days-of-week__container {
+        width: 402px;
+    }
+
+    .days-of-week__container > .days-of-week__underline {
+        width: 402px;
+    }
+}
 .calendar__wrapper {
     display: flex;
     align-items: center;
@@ -705,15 +743,36 @@ section > .header > span {
 
     width: 544px;
     height: 515px;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
+@media screen and (max-width: 1900px) {
+    .calendar__wrapper > .calendar__container {
+        width: 474px;
+        min-width: 474px;
+    }
+
+    .calendar__container > .inside__container {
+        width: 474px;
+        min-width: 474px;
+    }
+}
 .date-detail__event {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    transition: transform .1s;
+    transform-origin: left;
+    cursor: pointer;
+}
+
+.date-detail__event:hover {
+    transform: scale(1.01);
 }
 
 .date-detail__event > .left-block,
@@ -742,6 +801,8 @@ section > .header > span {
 
     border-radius: 18px;
     background-color: rgba(0, 37, 255, 1);
+
+    transition: height .1s;
 }
 
 .left-block.grey > .dynamic-circle {
@@ -749,7 +810,12 @@ section > .header > span {
 }
 
 .date-detail__event > .event-info {
+    transform: translateX(-5px);
+    width: 580px;
     margin-left: 12px;
+
+    transition: height .1s;
+    overflow: hidden;
 }
 
 .date-detail__event > .event-info > .theme,
@@ -787,6 +853,7 @@ section > .header > span {
 .date-detail__event > .time-range > .end {
     color: rgba(180, 180, 180, 1)
 }
+
 .date-detail__wrapper {
     position: relative;
 
@@ -795,8 +862,8 @@ section > .header > span {
     align-items: center;
     justify-content: flex-end;
 
-    height: 621px;
-    width: 571px;
+    width: 675px;
+    height: 573px;
 
     margin-left: 78px;
 }
@@ -808,26 +875,26 @@ section > .header > span {
     left: 0;
     bottom: 0;
 
-    width: 560px;
+    width: 647px;
     height: 60px;
     background: linear-gradient(transparent 20%, white 80%);
 }
 
 .date-detail__wrapper > .date-detail__header {
     position: absolute;
-    top: 58px;
+    top: 50px;
 
     display: flex;
     align-self: flex-start;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
 
-    width: 543px;
-    height: 66px;
+    width: 647px;
+    height: 58px;
 
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
 
     background-color: white;
     border-bottom: 1px solid #DBDBDB;
@@ -841,10 +908,11 @@ section > .header > span {
 
 .date-detail__body {
     width: 100%;
-    height: 488px;
+    height: 460px;
     transform: translate(0, -10px);
 
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .date-detail__body::-webkit-scrollbar {
@@ -866,7 +934,7 @@ section > .header > span {
     display: flex;
     flex-direction: column;
 
-    width: 543px;
+    width: 647px;
     height: 488px;
 }
 

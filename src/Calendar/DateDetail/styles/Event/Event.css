@@ -2,6 +2,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    transition: transform .1s;
+    transform-origin: left;
+    cursor: pointer;
+}
+
+.date-detail__event:hover {
+    transform: scale(1.01);
 }
 
 .date-detail__event > .left-block,
@@ -43,6 +51,7 @@
     width: 580px;
     margin-left: 12px;
 
+    transition: height .1s;
     overflow: hidden;
 }
 
