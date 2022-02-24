@@ -12,3 +12,12 @@
     transition: transform .1s;
 }
 
+
+@media screen and (max-width: 1900px) {
+    .dates-list__wrapper.swap-left {
+        transform: translateX(-482px);
+    }
+.dates-list__wrapper.swap-right {
+        transform: translateX(482px);
+    }
+}

@@ -23,3 +23,13 @@
 
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1900px) {
+    .inside__container > .days-of-week__container {
+        width: 402px;
+    }
+
+    .days-of-week__container > .days-of-week__underline {
+        width: 402px;
+    }
+}

@@ -36,10 +36,23 @@
 
     width: 544px;
     height: 515px;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@media screen and (max-width: 1900px) {
+    .calendar__wrapper > .calendar__container {
+        width: 474px;
+        min-width: 474px;
+    }
+
+    .calendar__container > .inside__container {
+        width: 474px;
+        min-width: 474px;
+    }
 }
 
 @import "DatesList/DatesList.css";

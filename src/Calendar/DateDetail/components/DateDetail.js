@@ -37,14 +37,18 @@ function DateDetail(props) {
                                    theme={event.theme}
                                    lecturer={event.lecturer}
                                    listener={event.listener}
-                                   address={event.address}/> :
+                                   address={event.address}
+                                   timeStart={event.timeStart}
+                                   timeEnd={event.timeEnd}/> :
                             <Event key={index}
                                    header="Лекция не подтверждена"
                                    status={false}
                                    theme={event.theme}
                                    lecturer={event.lecturer}
                                    listener={event.listener}
-                                   address={event.address}/>
+                                   address={event.address}
+                                   timeStart={event.timeStart}
+                                   timeEnd={event.timeEnd}/>
                     } )}
                 </main>
             </div>) : 
