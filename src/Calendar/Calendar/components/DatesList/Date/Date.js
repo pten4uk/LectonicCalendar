@@ -19,6 +19,7 @@ function Date(props) {
         else setEvents(null);
 
         if (checkEqualDates(props.store.calendar.checkedDate, props.date)) setActive(true);
+        else setActive(false);
     }, [props.date])
 
     return (
