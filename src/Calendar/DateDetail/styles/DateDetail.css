@@ -156,7 +156,7 @@
 @media screen and (max-width: 1240px) {
     .date-detail__wrapper {
         width: 360px;
-        margin-left: 0;
+        margin: 0 auto;
     }
 
     .date-detail__wrapper > .date-detail__header {
