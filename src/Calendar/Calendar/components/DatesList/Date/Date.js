@@ -27,11 +27,16 @@ function Date(props) {
         else setActive(false);
     }, [props.date])
 
+    useEffect(() => {
+        if (checkEqualDates(props.store.calendar.hoverDate, props.date)) setHover(true);
+        else setHover(false);
+    }, [props.store.calendar.hoverDate])
+
     return (
         <div className={getClassName(props)}
              onClick={() => clickHandler(props)}
-             onMouseEnter={() => {setHover(true); props.SetHoverDate(props.date)}}
-             onMouseLeave={() => {setHover(false); props.SetHoverDate(props.store.calendar.checkedDate)}}>
+             onMouseEnter={() => {props.SetHoverDate(props.date)}}
+             onMouseLeave={() => {props.SetHoverDate(props.store.calendar.checkedDate)}}>
             <span>{props.date.getDate()}</span>
             <Events events={events}
                     dateHover={hover}

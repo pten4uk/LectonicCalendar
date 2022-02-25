@@ -8,7 +8,7 @@ function EventMultiple(props) {
         <>
             <div className="current-date-event-multiple">
                 {confirmedEvents && notConfirmedEvents ?
-                    props.dateHover || props.dateActive ?
+                    props.dateHover ?
                         <>
                             <div className="event-multiple hover-grey">
                                 <span>{notConfirmedEvents}</span>

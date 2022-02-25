@@ -411,6 +411,16 @@ section > .header > span {
         transform: translateX(482px);
     }
 }
+
+@media screen and (max-width: 1240px) {
+    .dates-list__wrapper.swap-left {
+        transform: translateX(-355px);
+    }
+.dates-list__wrapper.swap-right {
+        transform: translateX(355px);
+    }
+}
+
 .current-date-event {
     width: 12px;
     height: 12px;
@@ -427,11 +437,20 @@ section > .header > span {
     background-color: rgba(196, 196, 196, 1);
     transform: translateX(-1px);
 }
+
+@media screen and (max-width: 1240px){
+    .current-date-event {
+        width: 8px;
+        height: 8px;
+    }
+}
 .current-date-event-multiple {
     justify-self: center;
     align-self: center;
     display: flex;
     justify-content: center;
+
+    transform: translateY(4px);
 }
 
 .current-date-event-multiple > .event-multiple {
@@ -440,8 +459,6 @@ section > .header > span {
 
     background-color: gray;
     border-radius: 50%;
-
-    transform: translateY(4px);
 
     transition: border-radius .2s, width .2s;
 }
@@ -462,7 +479,7 @@ section > .header > span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 4px));
+    transform: translate(-50%, -50%);
 
     font-size: 11px;
     font-weight: 500;
@@ -472,7 +489,7 @@ section > .header > span {
 
 .event-multiple.hover-blue,
 .event-multiple.hover-grey {
-    transform: translateY(4px) scale(.9);
+    transform: scale(.9);
     text-align: center;
     line-height: 20px;
     color: white;
@@ -487,13 +504,39 @@ section > .header > span {
 .event-multiple.hover-grey {
     background-color: rgba(180, 180, 180, 1);
 }
+
+
+@media screen and (max-width: 1240px) {
+    .current-date-event-multiple > .event-multiple {
+        width: 16px;
+        height: 16px;
+    }
+
+    .event-multiple.half-blue {
+        width: 8px;
+    }
+
+    .event-multiple.half-grey {
+        width: 8px;
+    }
+
+    .events-length {
+        font-size: 10px;
+    }
+
+    .event-multiple.hover-blue,
+    .event-multiple.hover-grey {
+        line-height: 16px;
+    }
+}
 .current-date-event-multiple > .event-same {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     justify-self: center;
     text-align: center;
     width: 20px;
     height: 20px;
-
-    transform: translateY(4px);
 }
 
 .event-same.blue {
@@ -512,6 +555,14 @@ section > .header > span {
     font-weight: 500;
     color: white;
 }
+
+
+@media screen and (max-width: 1240px){
+    .current-date-event-multiple > .event-same {
+        width: 16px;
+        height: 16px;
+    }
+}
 .current-date-events {
     display: flex;
     align-items: center;
@@ -520,6 +571,17 @@ section > .header > span {
     width: 26px;
 
     transform: translate(0, -9px);
+}
+
+.today > .current-date-events {
+    margin-top: 3px;
+}
+
+
+@media screen and (max-width: 1240px){
+    .current-date-events {
+        transform: translate(0, -7px);
+    }
 }
 .dates__list > .date {
     align-self: center;
@@ -535,6 +597,7 @@ section > .header > span {
 
     border-radius: 18px;
     background-color: #fff;
+
     transition: transform .1s;
 
     z-index: 1;
@@ -571,7 +634,13 @@ section > .header > span {
 
 .dates__list > .today {
     font-weight: 700;
-    background-color: rgba(213, 242, 255, 1);
+    background-color: rgba(95, 181, 255, 1);
+}
+
+.dates__list > .today > span {
+    margin-top: 3px;
+    font-size: 24px;
+    color: white;
 }
 
 .dates__list > .inactive {
@@ -589,6 +658,26 @@ section > .header > span {
 .dates__list > .weekend {
     color: #FFFFFF;
     background-color: #DBDBDB;
+}
+
+
+@media screen and (max-width: 1240px) {
+    .dates__list > .date {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 9px;
+    }
+
+    .dates__list > .date > span {
+        margin-top: 4px;
+        font-size: 11px;
+    }
+
+    .dates__list > .today > span {
+        margin-top: 0;
+        font-size: 16px;
+    }
 }
 .dates__list {
     display: grid;
@@ -627,7 +716,18 @@ section > .header > span {
         margin-top: 66px;
         background-color: var(--main-border-color);
     }
+}
 
+@media screen and (max-width: 1240px) {
+    .dates__list {
+        grid-template-columns: repeat(7, 45px);
+        grid-template-rows: repeat(6, 45px);
+        margin: 0 20px;
+    }
+
+    .dates__list > .dates__underlines {
+        display: none;
+    }
 }
 .inside__container > .month-nav {
     display: flex;
@@ -670,6 +770,12 @@ section > .header > span {
     transform: rotate(-45deg) translate(6px, 9px);
 }
 
+
+@media screen and (max-width: 1240px) {
+    .inside__container > .month-nav {
+        font-size: 13px;
+    }
+}
 .inside__container > .days-of-week__container {
     display: flex;
     flex-direction: column;
@@ -696,6 +802,7 @@ section > .header > span {
     margin-bottom: 20px;
 }
 
+
 @media screen and (max-width: 1900px) {
     .inside__container > .days-of-week__container {
         width: 402px;
@@ -705,6 +812,27 @@ section > .header > span {
         width: 402px;
     }
 }
+
+@media screen and (max-width: 1240px) {
+    .inside__container > .days-of-week__container {
+        width: 304px;
+    }
+
+    .days-of-week__container > .days-of-week__underline {
+        width: 304px;
+    }
+
+    .days-of-week__container > .days-of-week > .day-of-week {
+        font-size: 11px;
+    }
+
+    .days-of-week__container > .days-of-week__underline {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+
 .calendar__wrapper {
     display: flex;
     align-items: center;
@@ -717,7 +845,7 @@ section > .header > span {
     font-size: 14px;
 }
 
-.calendar__wrapper > .calendar__container {
+.calendar__container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -731,7 +859,7 @@ section > .header > span {
     overflow: hidden;
 }
 
-.calendar__wrapper > .calendar__container > .inside__container {
+.calendar__container > .inside__container {
     position: absolute;
 
     display: flex;
@@ -751,14 +879,32 @@ section > .header > span {
 }
 
 @media screen and (max-width: 1900px) {
-    .calendar__wrapper > .calendar__container {
+    .calendar__container {
         width: 474px;
-        min-width: 474px;
     }
 
     .calendar__container > .inside__container {
         width: 474px;
-        min-width: 474px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .calendar__wrapper {
+        flex-direction: column;
+    }
+
+    .calendar__container {
+        width: 360px;
+        height: 393px;
+
+        border-radius: 0;
+    }
+
+    .calendar__container > .inside__container {
+        width: 360px;
+        height: 393px;
+
+        bottom: 16px;
     }
 }
 .date-detail__event {
@@ -809,8 +955,8 @@ section > .header > span {
 }
 
 .date-detail__event > .event-info {
-    transform: translateX(-5px);
-    width: 580px;
+    transform: translateX(-35px);
+    width: 516px;
     margin-left: 12px;
 
     transition: height .1s;
@@ -857,6 +1003,21 @@ section > .header > span {
 
 .date-detail__event > .time-range > .end {
     color: rgba(180, 180, 180, 1)
+}
+
+
+@media screen and (max-width: 1900px) {
+    .date-detail__event > .event-info {
+        transform: translateX(-20px);
+        width: 409px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .date-detail__event > .event-info {
+        transform: translateX(-20px);
+        width: 289px;
+    }
 }
 
 .date-detail__wrapper {
@@ -939,7 +1100,7 @@ section > .header > span {
     display: flex;
     flex-direction: column;
 
-    width: 647px;
+    width: 637px;
     height: 488px;
 }
 
@@ -973,6 +1134,64 @@ section > .header > span {
     font-weight: 500;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 1900px){
+    .date-detail__wrapper {
+        width: 530px;
+        margin-left: 48px;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 500px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 526px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .date-detail__wrapper {
+        width: 410px;
+        margin-left: 48px;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 380px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 400px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .date-detail__wrapper {
+        width: 360px;
+        margin-left: 0;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 320px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 400px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 380px;
+    }
 }
 :root {
     --main-grey: rgba(180, 180, 180, 1);

@@ -12,6 +12,7 @@
 
     border-radius: 18px;
     background-color: #fff;
+
     transition: transform .1s;
 
     z-index: 1;
@@ -48,7 +49,13 @@
 
 .dates__list > .today {
     font-weight: 700;
-    background-color: rgba(213, 242, 255, 1);
+    background-color: rgba(95, 181, 255, 1);
+}
+
+.dates__list > .today > span {
+    margin-top: 3px;
+    font-size: 24px;
+    color: white;
 }
 
 .dates__list > .inactive {
@@ -66,6 +73,26 @@
 .dates__list > .weekend {
     color: #FFFFFF;
     background-color: #DBDBDB;
+}
+
+
+@media screen and (max-width: 1240px) {
+    .dates__list > .date {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 9px;
+    }
+
+    .dates__list > .date > span {
+        margin-top: 4px;
+        font-size: 11px;
+    }
+
+    .dates__list > .today > span {
+        margin-top: 0;
+        font-size: 16px;
+    }
 }
 
 @import "./Events/Events.css";

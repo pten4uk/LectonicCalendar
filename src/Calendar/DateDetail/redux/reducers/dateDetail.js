@@ -1,6 +1,6 @@
 const initialState = [
     {
-        date: new Date(2022, 1, 18),
+        date: new Date(2022, 1, 25),
         events: [
             {
                 status: true,

@@ -8,6 +8,17 @@
     transform: translate(0, -9px);
 }
 
+.today > .current-date-events {
+    margin-top: 3px;
+}
+
+
+@media screen and (max-width: 1240px){
+    .current-date-events {
+        transform: translate(0, -7px);
+    }
+}
+
 @import "./Event.css";
 @import "./EventMultiple.css";
 @import "./EventSame.css";

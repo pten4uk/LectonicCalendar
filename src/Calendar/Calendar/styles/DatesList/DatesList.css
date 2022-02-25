@@ -35,7 +35,18 @@
         margin-top: 66px;
         background-color: var(--main-border-color);
     }
+}
 
+@media screen and (max-width: 1240px) {
+    .dates__list {
+        grid-template-columns: repeat(7, 45px);
+        grid-template-rows: repeat(6, 45px);
+        margin: 0 20px;
+    }
+
+    .dates__list > .dates__underlines {
+        display: none;
+    }
 }
 
 @import "DatesListSwappable.css";

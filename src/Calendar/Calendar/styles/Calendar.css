@@ -10,7 +10,7 @@
     font-size: 14px;
 }
 
-.calendar__wrapper > .calendar__container {
+.calendar__container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@
     overflow: hidden;
 }
 
-.calendar__wrapper > .calendar__container > .inside__container {
+.calendar__container > .inside__container {
     position: absolute;
 
     display: flex;
@@ -44,14 +44,32 @@
 }
 
 @media screen and (max-width: 1900px) {
-    .calendar__wrapper > .calendar__container {
+    .calendar__container {
         width: 474px;
-        min-width: 474px;
     }
 
     .calendar__container > .inside__container {
         width: 474px;
-        min-width: 474px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .calendar__wrapper {
+        flex-direction: column;
+    }
+
+    .calendar__container {
+        width: 360px;
+        height: 393px;
+
+        border-radius: 0;
+    }
+
+    .calendar__container > .inside__container {
+        width: 360px;
+        height: 393px;
+
+        bottom: 16px;
     }
 }
 

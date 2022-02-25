@@ -46,8 +46,8 @@
 }
 
 .date-detail__event > .event-info {
-    transform: translateX(-5px);
-    width: 580px;
+    transform: translateX(-35px);
+    width: 516px;
     margin-left: 12px;
 
     transition: height .1s;
@@ -94,4 +94,19 @@
 
 .date-detail__event > .time-range > .end {
     color: rgba(180, 180, 180, 1)
+}
+
+
+@media screen and (max-width: 1900px) {
+    .date-detail__event > .event-info {
+        transform: translateX(-20px);
+        width: 409px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .date-detail__event > .event-info {
+        transform: translateX(-20px);
+        width: 289px;
+    }
 }

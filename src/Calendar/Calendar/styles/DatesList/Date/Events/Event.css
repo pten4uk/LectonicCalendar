@@ -14,3 +14,10 @@
     background-color: rgba(196, 196, 196, 1);
     transform: translateX(-1px);
 }
+
+@media screen and (max-width: 1240px){
+    .current-date-event {
+        width: 8px;
+        height: 8px;
+    }
+}

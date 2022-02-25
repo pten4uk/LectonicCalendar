@@ -78,7 +78,7 @@
     display: flex;
     flex-direction: column;
 
-    width: 647px;
+    width: 637px;
     height: 488px;
 }
 
@@ -113,5 +113,65 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (max-width: 1900px){
+    .date-detail__wrapper {
+        width: 530px;
+        margin-left: 48px;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 500px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 526px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .date-detail__wrapper {
+        width: 410px;
+        margin-left: 48px;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 380px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 400px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .date-detail__wrapper {
+        width: 360px;
+        margin-left: 0;
+    }
+
+    .date-detail__wrapper > .date-detail__header {
+        width: 320px;
+    }
+
+    .date-detail__wrapper::after {
+        width: 400px;
+    }
+
+    .date-detail__body > .date-detail__main {
+        width: 380px;
+    }
+}
+
+
 
 @import "Event/Event.css";

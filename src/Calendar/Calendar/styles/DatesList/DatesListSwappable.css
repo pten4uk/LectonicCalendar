@@ -21,3 +21,12 @@
         transform: translateX(482px);
     }
 }
+
+@media screen and (max-width: 1240px) {
+    .dates-list__wrapper.swap-left {
+        transform: translateX(-355px);
+    }
+.dates-list__wrapper.swap-right {
+        transform: translateX(355px);
+    }
+}
