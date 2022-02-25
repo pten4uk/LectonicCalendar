@@ -13,4 +13,8 @@ export function DeactivateSwap() {
 export function DeactivateSwapClass() {
     return {type: "DEACTIVATE_SWAP_CLASS"}
 }
+export function SetHoverDate(date) {
+    return {type: "SET_HOVER_DATE", payload: {date: date}}
+}
+
 

@@ -30,25 +30,17 @@ function DateDetail(props) {
             (<div className="date-detail__body">
                 <main className="date-detail__main">
                     {events.map((event, index) => {
-                        return event.status ?
-                            <Event key={index}
-                                   header="Лекция подтверждена"
-                                   status={true}
-                                   theme={event.theme}
-                                   lecturer={event.lecturer}
-                                   listener={event.listener}
-                                   address={event.address}
-                                   timeStart={event.timeStart}
-                                   timeEnd={event.timeEnd}/> :
-                            <Event key={index}
-                                   header="Лекция не подтверждена"
-                                   status={false}
-                                   theme={event.theme}
-                                   lecturer={event.lecturer}
-                                   listener={event.listener}
-                                   address={event.address}
-                                   timeStart={event.timeStart}
-                                   timeEnd={event.timeEnd}/>
+                        return<Event key={index}
+                                     header={event.status ?
+                                         "Лекция подтверждена" :
+                                         "Лекция не подтверждена"}
+                                     status={event.status}
+                                     theme={event.theme}
+                                     lecturer={event.lecturer}
+                                     listener={event.listener}
+                                     address={event.address}
+                                     timeStart={event.timeStart}
+                                     timeEnd={event.timeEnd}/>
                     } )}
                 </main>
             </div>) : 

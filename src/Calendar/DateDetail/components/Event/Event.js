@@ -31,9 +31,9 @@ function Event(props) {
             </div>
             <div className="event-info"
                  ref={eventInfo}
-                 onClick={() => setEventDetail(!eventDetail)}
                  style={{height: eventDetailHeight}}>
-                <div className="header">{props.header}</div>
+                <div className="header"
+                     onClick={() => setEventDetail(!eventDetail)}>{props.header}</div>
                 <div className="theme">Тема: <span>{props.theme}</span></div>
                 <div className="lecturer">Лектор: <span>{props.lecturer}</span></div>
                 <div className="listener">Слушатель: <span>{props.listener}</span></div>

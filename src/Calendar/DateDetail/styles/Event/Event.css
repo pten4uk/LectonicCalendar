@@ -5,7 +5,6 @@
 
     transition: transform .1s;
     transform-origin: left;
-    cursor: pointer;
 }
 
 .date-detail__event:hover {
@@ -71,6 +70,12 @@
 .date-detail__event > .event-info > .header {
     margin-bottom: 0;
     font-weight: 700;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .date-detail__event > .event-info > .theme {

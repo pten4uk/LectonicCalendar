@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {WEEK_DAYS} from "../../utils/calendar";
-import {SetCheckedDate, SwapMonthToNext, SwapMonthToPrev} from "../../../redux/actions/calendar";
+import {
+    SetCheckedDate, SetHoverAnotherDateToFalse,
+    SetHoverAnotherDateToTrue, SetHoverDate,
+    SwapMonthToNext,
+    SwapMonthToPrev
+} from "../../../redux/actions/calendar";
 import {checkEqualDates, checkNeedSwapToNextMonth, checkNeedSwapToPrevMonth} from "../../utils/date";
 import Events from "./Events/Events";
 
@@ -25,8 +30,8 @@ function Date(props) {
     return (
         <div className={getClassName(props)}
              onClick={() => clickHandler(props)}
-             onMouseEnter={() => setHover(true)}
-             onMouseLeave={() => setHover(false)}>
+             onMouseEnter={() => {setHover(true); props.SetHoverDate(props.date)}}
+             onMouseLeave={() => {setHover(false); props.SetHoverDate(props.store.calendar.checkedDate)}}>
             <span>{props.date.getDate()}</span>
             <Events events={events}
                     dateHover={hover}
@@ -44,6 +49,8 @@ export default connect(
             () => dispatch(SwapMonthToNext()),
         SwapMonthToPrev:
             () => dispatch(SwapMonthToPrev()),
+        SetHoverDate:
+            (date) => dispatch(SetHoverDate(date)),
     })
 )(Date);
 
@@ -57,7 +64,7 @@ function getClassName(props) {
         props.date.getDay() === WEEK_DAYS.Sunday) className += " weekend";
 
     if (checkEqualDates(props.date, props.store.calendar.today)) className += " today"
-    if (checkEqualDates(props.date, props.store.calendar.checkedDate)) className += " active"
+    if (checkEqualDates(props.date, props.store.calendar.hoverDate)) className += " active"
 
     return className
 }
@@ -70,3 +77,4 @@ function clickHandler(props) {
     }
     props.SetCheckedDate(props.date)
 }
+
