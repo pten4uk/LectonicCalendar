@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
-import {WEEK_DAYS} from "../../utils/calendar";
 import {
     SetCheckedDate,
     SetHoverDate,
@@ -35,8 +34,8 @@ function Date(props) {
     return (
             <div className={getClassName(props)}
                  onClick={() => clickHandler(props)}
-                 onMouseEnter={() => {props.SetHoverDate(props.date)}}
-                 onMouseLeave={() => {props.SetHoverDate(props.store.calendar.checkedDate)}}>
+                 onMouseEnter={() => {hoverHandler(props, true)}}
+                 onMouseLeave={() => {hoverHandler(props, false)}}>
                 <span>{props.date.getDate()}</span>
                 <Events events={events}
                         dateHover={hover}
@@ -81,3 +80,14 @@ function clickHandler(props) {
     props.SetCheckedDate(props.date)
 }
 
+
+function hoverHandler(props, enter) {
+
+    if (props.store.calendar.currentDate.getMonth() !== props.date.getMonth()) {
+        return props.SetHoverDate(props.store.calendar.checkedDate);
+    }
+
+    enter ?
+        props.SetHoverDate(props.date) :
+        props.SetHoverDate(props.store.calendar.checkedDate)
+}

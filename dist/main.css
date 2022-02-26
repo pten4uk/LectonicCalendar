@@ -615,7 +615,7 @@ section > .header > span {
 }
 
 .calendar-date.active {
-    transform: scale(1.35);
+    transform: scale(1.32);
 
     font-weight: 700;
 
@@ -673,6 +673,13 @@ section > .header > span {
         margin-top: 0;
         font-size: 16px;
     }
+}
+
+@media screen and (max-width: 1900px) {
+    .calendar-date.active {
+        transform: scale(1.15);
+    }
+
 }
 .dates__list {
     display: grid;
@@ -912,13 +919,6 @@ section > .header > span {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-
-    transition: transform .1s;
-    transform-origin: left;
-}
-
-.date-detail__event:hover {
-    transform: scale(1.01);
 }
 
 .date-detail__event > .left-block,
@@ -960,8 +960,14 @@ section > .header > span {
     width: 516px;
     margin-left: 12px;
 
-    transition: height .1s;
+    transition: height .1s, transform .1s;
+    transform-origin: left;
+
     overflow: hidden;
+}
+
+.date-detail__event > .event-info:hover {
+    transform: translateX(-30px);
 }
 
 .date-detail__event > .event-info > .theme,
@@ -1012,12 +1018,26 @@ section > .header > span {
         transform: translateX(-20px);
         width: 409px;
     }
+
+    .date-detail__event > .event-info:hover {
+        transform: scale(1.01) translateX(-20px);
+    }
 }
 
 @media screen and (max-width: 1400px) {
     .date-detail__event > .event-info {
-        transform: translateX(-20px);
         width: 289px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .date-detail__event > .event-info {
+        transform: translateX(-5px);
+        width: 289px;
+    }
+
+    .date-detail__event > .event-info:hover {
+        transform: translateX(-5px);
     }
 }
 
@@ -1178,7 +1198,9 @@ section > .header > span {
 
 @media screen and (max-width: 1240px) {
     .date-detail__wrapper {
-        width: 360px;
+        width: 340px;
+        height: 430px;
+
         margin: 0 auto;
     }
 
@@ -1187,11 +1209,15 @@ section > .header > span {
     }
 
     .date-detail__wrapper::after {
-        width: 400px;
+        width: 320px;
+    }
+
+    .date-detail__body {
+        height: 314px;
     }
 
     .date-detail__body > .date-detail__main {
-        width: 330px;
+        width: 320px;
     }
 }
 :root {

@@ -155,7 +155,9 @@
 
 @media screen and (max-width: 1240px) {
     .date-detail__wrapper {
-        width: 360px;
+        width: 340px;
+        height: 430px;
+
         margin: 0 auto;
     }
 
@@ -164,11 +166,15 @@
     }
 
     .date-detail__wrapper::after {
-        width: 400px;
+        width: 320px;
+    }
+
+    .date-detail__body {
+        height: 314px;
     }
 
     .date-detail__body > .date-detail__main {
-        width: 330px;
+        width: 320px;
     }
 }
 
