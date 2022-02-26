@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {WEEK_DAYS} from "../../utils/calendar";
 import {
-    SetCheckedDate, SetHoverAnotherDateToFalse,
-    SetHoverAnotherDateToTrue, SetHoverDate,
+    SetCheckedDate,
+    SetHoverDate,
     SwapMonthToNext,
     SwapMonthToPrev
 } from "../../../redux/actions/calendar";
@@ -33,15 +33,15 @@ function Date(props) {
     }, [props.store.calendar.hoverDate])
 
     return (
-        <div className={getClassName(props)}
-             onClick={() => clickHandler(props)}
-             onMouseEnter={() => {props.SetHoverDate(props.date)}}
-             onMouseLeave={() => {props.SetHoverDate(props.store.calendar.checkedDate)}}>
-            <span>{props.date.getDate()}</span>
-            <Events events={events}
-                    dateHover={hover}
-                    dateActive={active}/>
-        </div>
+            <div className={getClassName(props)}
+                 onClick={() => clickHandler(props)}
+                 onMouseEnter={() => {props.SetHoverDate(props.date)}}
+                 onMouseLeave={() => {props.SetHoverDate(props.store.calendar.checkedDate)}}>
+                <span>{props.date.getDate()}</span>
+                <Events events={events}
+                        dateHover={hover}
+                        dateActive={active}/>
+            </div>
     )
 }
 
@@ -61,12 +61,10 @@ export default connect(
 
 
 function getClassName(props) {
-    let className = "date";
+    let className = "calendar-date";
 
     if (props.store.calendar.currentDate.getMonth() !==
-        props.date.getMonth()) return "date inactive";
-    else if (props.date.getDay() === WEEK_DAYS.Saturday ||
-        props.date.getDay() === WEEK_DAYS.Sunday) className += " weekend";
+        props.date.getMonth()) return "calendar-date inactive";
 
     if (checkEqualDates(props.date, props.store.calendar.today)) className += " today"
     if (checkEqualDates(props.date, props.store.calendar.hoverDate)) className += " active"

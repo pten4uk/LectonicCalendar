@@ -583,7 +583,7 @@ section > .header > span {
         transform: translate(0, -7px);
     }
 }
-.dates__list > .date {
+.calendar-date {
     align-self: center;
     justify-self: center;
 
@@ -604,7 +604,7 @@ section > .header > span {
     cursor: pointer;
 }
 
-.dates__list > .date:hover {
+.calendar-date:hover {
     font-weight: 700;
     border: 2px solid var(--main-grey);
     box-shadow: 0 4px 10px rgba(0, 6, 32, .2);
@@ -614,8 +614,8 @@ section > .header > span {
     z-index: 2;
 }
 
-.dates__list > .date.active {
-    transform: scale(1.25);
+.calendar-date.active {
+    transform: scale(1.35);
 
     font-weight: 700;
 
@@ -625,56 +625,51 @@ section > .header > span {
     z-index: 3;
 }
 
-.dates__list > .date > span {
+.calendar-date > span {
     display: block;
     margin-top: 8px;
 
     font-size: 12px;
 }
 
-.dates__list > .today {
+.calendar-date.today {
     font-weight: 700;
     background-color: rgba(95, 181, 255, 1);
 }
 
-.dates__list > .today > span {
+.calendar-date.today > span {
     margin-top: 3px;
     font-size: 24px;
     color: white;
 }
 
-.dates__list > .inactive {
+.calendar-date.inactive {
     color: var(--main-grey);
     background-color: inherit;
 }
 
-.dates__list > .inactive:hover {
+.calendar-date.inactive:hover {
     transform: none;
     border: none;
     box-shadow: none;
     font-weight: inherit;
 }
 
-.dates__list > .weekend {
-    color: #FFFFFF;
-    background-color: #DBDBDB;
-}
-
 
 @media screen and (max-width: 1240px) {
-    .dates__list > .date {
+    .calendar-date {
         width: 40px;
         height: 40px;
 
         border-radius: 9px;
     }
 
-    .dates__list > .date > span {
+    .calendar-date > span {
         margin-top: 4px;
         font-size: 11px;
     }
 
-    .dates__list > .today > span {
+    .calendar-date.today > span {
         margin-top: 0;
         font-size: 16px;
     }
