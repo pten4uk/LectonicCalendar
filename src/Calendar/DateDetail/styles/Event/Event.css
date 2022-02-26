@@ -1,13 +1,15 @@
 .date-detail__event {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+
+    padding: 10px 5px;
 
     transition: transform .1s;
 }
 
 .date-detail__event:hover {
     transform: translateX(5px);
+    background-color: #F5F5F5;
 }
 
 .date-detail__event > .left-block,
@@ -49,7 +51,8 @@
     width: 516px;
     margin-left: 12px;
 
-    transition: height .1s;
+    transition: height .1s, transform .1s;
+    transform-origin: left;
 
     overflow: hidden;
 }
