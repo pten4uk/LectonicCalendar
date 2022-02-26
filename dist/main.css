@@ -925,7 +925,6 @@ section > .header > span {
 
 .date-detail__event:hover {
     transform: translateX(5px);
-    background-color: #F5F5F5;
 }
 
 .date-detail__event > .left-block,
@@ -967,8 +966,7 @@ section > .header > span {
     width: 516px;
     margin-left: 12px;
 
-    transition: height .1s, transform .1s;
-    transform-origin: left;
+    transition: height .1s;
 
     overflow: hidden;
 }
