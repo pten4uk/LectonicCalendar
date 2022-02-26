@@ -1243,6 +1243,10 @@ section > .header > span {
         width: 315px;
     }
 
+    .date-detail__wrapper > .no-events {
+        width: 320px;
+    }
+
     .no-events > .create-event {
         width: 250px;
     }
