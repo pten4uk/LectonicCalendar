@@ -80,7 +80,7 @@
 
     margin-top: 20px;
 
-    width: 647px;
+    width: 642px;
     height: 488px;
 }
 
@@ -90,19 +90,21 @@
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    top: 176px;
+    top: 160px;
 
-    width: 432px;
+     transform: translateX(-10px);
+
+    width: 400px;
 }
 
 .no-events > p {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .no-events > .create-event {
-    width: 352px;
-    height: 48px;
+    width: 320px;
+    height: 44px;
 
     margin-top: 28px;
 
@@ -112,9 +114,10 @@
 
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 @media screen and (max-width: 1900px){
     .date-detail__wrapper {
@@ -131,9 +134,8 @@
     }
 
     .date-detail__body > .date-detail__main {
-        width: 500px;
+        width: 495px;
     }
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -151,32 +153,51 @@
     }
 
     .date-detail__body > .date-detail__main {
+        width: 375px;
+    }
+
+    .date-detail__wrapper > .no-events {
         width: 380px;
+    }
+
+    .no-events > p {
+        font-size: 11px;
     }
 }
 
 @media screen and (max-width: 1240px) {
     .date-detail__wrapper {
-        width: 340px;
+        width: 360px;
         height: 430px;
 
         margin: 0 auto;
     }
 
     .date-detail__wrapper > .date-detail__header {
+        top: 65px;
+
         width: 320px;
+        height: 40px;
+
+        margin-left: 10px;
     }
 
     .date-detail__wrapper::after {
+        margin-left: 10px;
         width: 320px;
     }
 
     .date-detail__body {
         height: 314px;
+        margin-left: 10px;
     }
 
     .date-detail__body > .date-detail__main {
-        width: 320px;
+        width: 315px;
+    }
+
+    .no-events > .create-event {
+        width: 250px;
     }
 }
 

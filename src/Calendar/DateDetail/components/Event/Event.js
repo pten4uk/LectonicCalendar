@@ -19,7 +19,7 @@ function Event(props) {
             setCircleHeight(24);
         } else {
             setEventHeight(`${eventInfo.current.scrollHeight}px`);
-            setCircleHeight(eventInfo.current.scrollHeight - 15.4);
+            setCircleHeight(eventInfo.current.scrollHeight - 13.4);
         }
     }, [eventDetail])
 
