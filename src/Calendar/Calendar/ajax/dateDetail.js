@@ -3,7 +3,7 @@ const HEADERS = {
 }
 
 
-export async function getEventsForMonth(year, month) {
+export function getEventsForMonth(year, month) {
   const options = {
     method: "GET",
     headers: HEADERS,
@@ -13,7 +13,4 @@ export async function getEventsForMonth(year, month) {
     `http://127.0.0.1:8000/api/workrooms/calendar/lecturer/?year=${year}&month=${month}`,
     options
     )
-    .then(response => response.json())
-    .then(data => data)
-    .catch(error => console.log('Ошибка при получании данных:', error))
 }

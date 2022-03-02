@@ -23,9 +23,9 @@ function DateDetail(props) {
 
     return (
         <div className="date-detail__wrapper">
-            <header className="date-detail__header">
+            <div className="date-detail__header">
                 <span>{day}.{month}.{year}</span>
-            </header>
+            </div>
             {events ? 
             (<div className="date-detail__body">
                 <main className="date-detail__main">
