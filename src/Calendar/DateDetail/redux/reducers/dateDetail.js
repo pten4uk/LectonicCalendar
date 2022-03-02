@@ -1,6 +1,6 @@
 const initialState = [
     {
-        date: new Date(2022, 1, 25),
+        date: new Date(2022, 2, 25),
         events: [
             {
                 status: true,
@@ -32,7 +32,7 @@ const initialState = [
         ],
     },
     {
-        date: new Date(2022, 1, 15),
+        date: new Date(2022, 2, 15),
         events: [
             {
                 status: false,
@@ -55,7 +55,7 @@ const initialState = [
         ],
     },
     {
-        date: new Date(2022, 1, 9),
+        date: new Date(2022, 2, 9),
         events: [
             {
                 status: true,
