@@ -1,6 +1,6 @@
 import React from "react";
-import Calendar from "./components/Calendar/Calendar/components/Calendar";
-import DateDetail from "./components/Calendar/DateDetail/components/DateDetail";
+import Calendar from "./Calendar/Calendar/jsx/Calendar";
+import DateDetail from "./Calendar/DateDetail/jsx/DateDetail";
 import {connect} from "react-redux";
 
 
